@@ -20,8 +20,10 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <a class="logo" href="index.html">
-        <img class="logo__name" src="img/logo-icon-mobile.svg" width="82" height="25"
-          alt="название магазина Драйв мото">
+        <picture>
+          <source media="(min-width: 1171)" srcset="img/logo-icon-desktop.svg" width="80" height="76">
+          <img class="logo__img" src="img/logo-icon-mobile.svg" width="82" height="25" alt="логотип магазина Драйв мото">
+        </picture>
       </a>
       <nav class="navigation">
         <ul class="navigation__list-user">
@@ -53,10 +55,6 @@
             <a class="navigation__site-list__link" href="#">Доставка и оплата</a>
           </li>
         </ul>
-        <a class="logo">
-          <img class="logo__icon" src="img/logo-icon-desktop.svg" width="80" height="76"
-            alt="логотип магазина Драйв мото">
-        </a>
         <ul class="navigation">
           <li class="navigation__item navigation__item--mobile">
             <a class="navigation__link" href="#">Войти</a>
@@ -156,10 +154,10 @@
               <option value="cheaper">Сначала дешевле</option>
             </select>
             <div class="sorting__card-grid-toogle sorting__card-grid-toogle--current">
-              <button class="sorting__btn-toggle" type="submit">
+              <button class="sorting__btn-toggle" type="button">
                 <span class="visually-hidden">Показать таблицей</span>
               </button>
-              <button class="sorting__btn-toggle" type="submit">
+              <button class="sorting__btn-toggle" type="button">
                 <span class="visually-hidden">Показать списком</span>
               </button>
             </div>
@@ -169,200 +167,205 @@
     </section>
 
     <div class="container">
-    <div class="jet-ski-wrapper">
-      <section class="filter">
-        <h2 class="visually-hidden">Фильтр</h2>
-        <div class="filter__type-btn filter__type-btn--current">
-          <button class="filter__btn" type="button">Параметры</button>
-          <button class="filter__btn" type="button">По марке</button>
-        </div>
-        <fieldset class="filter__group filter__group-availability">
-
-            <legend class="filter__item">Наличие</legend>
-            <button class="filter__btn-show-hide">
-              <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
-            </button>
-
-          <ul class="filter__list">
-            <li class="filter__item">
-              <input class="filter__checkbox" type="checkbox" name="available" id="available">
-              <label for="available">В наличие</label>
-            </li>
-            <li class="filter__item">
-              <input class="filter__checkbox" type="checkbox" name="on-order" id="on-order">
-              <label for="on-order">Под заказ</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="filter__group">
-
-            <legend class="filter__item">Новинки</legend>
-            <button class="filter__btn-show-hide">
-              <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
-            </button>
-            <ul class="filter__list">
-              <li class="filter__item">
-                <input class="filter__checkbox" type="checkbox" name="all" id="all" checked>
-                <label for="all">Все</label>
-              </li>
-              <li class="filter__item">
-                <input class="filter__checkbox" type="checkbox" name="new" id="new">
-                <label for="new">Новинки</label>
-              </li>
-              <li class="filter__item">
-                <input class="filter__checkbox" type="checkbox" name="stock" id="stock">
-                <label for="stock">Акции</label>
-              </li>
-            </ul>
-
-        </fieldset>
-        <fieldset class="filter__group">
-
-            <legend class="filter__item">Цена</legend>
-            <button class="filter__btn-show-hide">
-              <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
-            </button>
-
-          <div class="range">
-            <div class="range__scale">
-              <div class="range__bar">
-                <button class="range__toggle range__toggle--min">
-                  <span class="visually-hidden">Изменить минимальную цену</span>
-                </button>
-                <button class="range__toggle range__toggle--max">
-                  <span class="visually-hidden">Изменить максимальную цену</span>
-                </button>
+      <div class="jet-ski-wrapper">
+        <section class="filter-jet-ski">
+          <form class="filter-jet-ski__form" action="#" method="get">
+            <h2 class="visually-hidden">Фильтр</h2>
+            <div class="filter-jet-ski__type-btn filter-jet-ski__type-btn--current">
+              <button class="filter-jet-ski__btn" type="button">Параметры</button>
+              <button class="filter-jet-ski__btn" type="button">По марке</button>
+            </div>
+            <fieldset class="filter-jet-ski__group filter-jet-ski__group-availability">
+              <legend class="filter-jet-ski__item">Наличие</legend>
+              <button class="filter-jet-ski__btn-show-hide">
+                <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
+              </button>
+              <ul class="filter-jet-ski__list">
+                <li class="filter-jet-ski__item">
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="available" id="available">
+                  <label for="available">В наличие</label>
+                </li>
+                <li class="filter-jet-ski__item">
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="on-order" id="on-order">
+                  <label for="on-order">Под заказ</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-jet-ski__group">
+              <legend class="filter-jet-ski__item">Новинки</legend>
+              <button class="filter-jet-ski__btn-show-hide">
+                <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
+              </button>
+              <ul class="filter-jet-ski__list">
+                <li class="filter-jet-ski__item">
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="all" id="all" checked>
+                  <label for="all">Все</label>
+                </li>
+                <li class="filter-jet-ski__item">
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="new" id="new">
+                  <label for="new">Новинки</label>
+                </li>
+                <li class="filter-jet-ski__item">
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="stock" id="stock">
+                  <label for="stock">Акции</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-jet-ski__group">
+              <legend class="filter-jet-ski__item">Цена</legend>
+              <button class="filter-jet-ski__btn-show-hide">
+                <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
+              </button>
+              <div class="range">
+                <div class="range__scale">
+                  <div class="range__bar">
+                    <button class="range__toggle range__toggle--min">
+                      <span class="visually-hidden">Изменить минимальную цену</span>
+                    </button>
+                    <button class="range__toggle range__toggle--max">
+                      <span class="visually-hidden">Изменить максимальную цену</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="range__inputs">
+                  <label class="range__label">от
+                    <input class="range__input" type="number" name="min-price" value="100000">
+                  </label>
+                  <label class="range__label">до
+                    <input class="range__input" type="number" name="max-price" value="500000">
+                  </label>
+                </div>
               </div>
+            </fieldset>
+            <fieldset class="filter-jet-ski__group">
+              <legend class="filter-jet-ski__item">Мощность, л.с.</legend>
+              <select class="filter-jet-ski__select" name="power" id="power">
+                <option class="filter-jet-ski__option" value="90">90</option>
+                <option class="filter-jet-ski__option" value="130">130</option>
+                <option class="filter-jet-ski__option" value="154">154</option>
+                <option class="filter-jet-ski__option" value="230">230</option>
+                <option class="filter-jet-ski__option" value="300">300</option>
+              </select>
+            </fieldset>
+            <fieldset class="filter-jet-ski__group">
+              <legend class="filter-jet-ski__item">Мощность двигателя, л.с.</legend>
+              <select class="filter-jet-ski__select" name="power-motor" id="power-motor">
+                <option class="filter-jet-ski__option" value="55">55</option>
+              </select>
+            </fieldset>
+            <fieldset class="filter-jet-ski__group">
+              <legend class="filter-jet-ski__item">Макс. скорость</legend>
+              <select class="filter-jet-ski__select" name="speed" id="speed">
+                <option class="filter-jet-ski__option" value="205">205</option>
+              </select>
+            </fieldset>
+            <fieldset class="filter-jet-ski__group">
+              <legend class="filter-jet-ski__item">Бренд</legend>
+              <button class="filter-jet-ski__btn-show-hide">
+                <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
+              </button>
+              <ul class="filter-jet-ski__list">
+                <li class="filter-jet-ski__item">
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="brp" id="brp" checked>
+                  <label for="brp">BRP</label>
+                </li>
+                <li class="filter-jet-ski__item">
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="spark2" id="spark2" checked>
+                  <label for="spark2">Spark 2</label>
+                </li>
+                <li class="filter-jet-ski__item">
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="spark3" id="spark3">
+                  <label for="spark3">Spark 3</label>
+                </li>
+              </ul>
+              <a class="filter-jet-ski__show-more" href="#">Показать еще</a>
+            </fieldset>
+            <fieldset class="filter-jet-ski__group">
+              <legend class="filter-jet-ski__item">Модель</legend>
+              <button class="filter-jet-ski__btn-show-hide">
+                <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
+              </button>
+              <form class="filter-jet-ski__model-form" action="#" method="post">
+                <label class="visually-hidden" for="search-model">Поле поиска по модели</label>
+                <input type="text" class="filter-jet-ski__field-search-model" name="search-model" id="search-model"
+                  placeholder="Введите модель">
+              </form>
+              <ul class="filter-jet-ski__list">
+                <li class="filter-jet-ski__item">
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="seadoo-spark2" id="seadoo-spark2" checked>
+                  <label for="seadoo-spark2">Sea-doo Spark 2</label>
+                </li>
+                <li class="filter-jet-ski__item">
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="seadoo-spark90" id="seadoo-spark90" checked>
+                  <label for="seadoo-spark90">SeaDoo Spark 90</label>
+                </li>
+                <li class="filter-jet-ski__item">
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="seadoo-gti155" id="seadoo-gti155">
+                  <label for="seadoo-gti155">SeaDoo GTI 155</label>
+                </li>
+                <li class="filter-jet-ski__item">
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="gtr230" id="gtr230">
+                  <label for="gtr230">SeaDoo GTR 230</label>
+                </li>
+              </ul>
+              <a class="filter-jet-ski__show-more" href="#">Показать еще</a>
+            </fieldset>
+            <fieldset class="filter-jet-ski__group">
+              <legend class="filter-jet-ski__item">Акции</legend>
+              <button class="filter-jet-ski__btn-show-hide" type="button">
+                <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
+              </button>
+              <ul class="filter-jet-ski__stock">
+                <li class="filter-jet-ski__item-stock">
+                  <input type="checkbox" class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--sale visually-hidden" name="sale" id="sale" checked>
+                  <label for="sale">Sale</label>
+                </li>
+                <li class="filter-jet-ski__item-stock">
+                  <input type="checkbox" class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--new visually-hidden" name="new" id="new">
+                  <label for="new">New</label>
+                </li>
+                <li class="filter-jet-ski__item-stock">
+                  <input type="checkbox" class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--hit visually-hidden" name="hit" id="hit">
+                  <label for="hit">Hit</label>
+                </li>
+                <li class="filter-jet-ski__item-stock">
+                  <input type="checkbox" class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--dealer visually-hidden" name="dealer" id="dealer" checked>
+                  <label for="dealer">Дилер</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-jet-ski__group">
+              <legend class="filter-jet-ski__item">Страны</legend>
+              <button class="filter-jet-ski__btn-show-hide" type="button">
+                <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
+              </button>
+              <ul class="filter-jet-ski__list">
+                <li class="filter-jet-ski__item">
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="russia" id="russia" checked>
+                  <label for="russia">Россия</label>
+                </li>
+                <li class="filter-jet-ski__item">
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="Germany" id="Germany" checked>
+                  <label for="Germany">Германия</label>
+                </li>
+                <li class="filter-jet-ski__item">
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="China" id="China">
+                  <label for="China">Китай</label>
+                </li>
+                <li class="filter-jet-ski__item">
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="usa" id="usa">
+                  <label for="usa">Сша</label>
+                </li>
+              </ul>
+              <a class="filter-jet-ski__show-more" href="#">Показать еще</a>
+            </fieldset>
+            <div class="filter-jet-ski__wrapper-bottom">
+              <button class="filter-jet-ski__btn-checked" type="submit">Выбрать</button>
+              <button class="filter-jet-ski__extra-options" type="button">Дополнительные параметры</button>
+              <button class="filter-jet-ski__reset" type="reset">Сбросить фильтр</button>
             </div>
-            <div class="range__inputs">
-              <label class="range__label">от
-                <input class="range__input" type="number" name="min-price" value="100000">
-              </label>
-              <label class="range__label">до
-                <input class="range__input" type="number" name="max-price" value="500000">
-              </label>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset class="filter__group">
-          <legend class="filter__item">Мощность, л.с.</legend>
-          <select class="filter__select" name="power" id="power">
-            <option class="filter__option" value="90">90</option>
-            <option class="filter__option" value="130">130</option>
-            <option class="filter__option" value="154">154</option>
-            <option class="filter__option" value="230">230</option>
-            <option class="filter__option" value="300">300</option>
-          </select>
-        </fieldset>
-        <fieldset class="filter__group">
-          <legend class="filter__item">Мощность двигателя, л.с.</legend>
-          <select class="filter__select" name="power-motor" id="power-motor">
-            <option class="filter__option" value="55">55</option>
-          </select>
-        </fieldset>
-        <fieldset class="filter__group">
-          <legend class="filter__item">Макс. скорость</legend>
-          <select class="filter__select" name="speed" id="speed">
-            <option class="filter__option" value="205">205</option>
-          </select>
-        </fieldset>
-        <fieldset class="filter__group">
-
-            <legend class="filter__item">Бренд</legend>
-            <button class="filter__btn-show-hide">
-              <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
-            </button>
-            <ul class="filter__list">
-              <li class="filter__item">
-                <input class="filter__checkbox" type="checkbox" name="brp" id="brp" checked>
-                <label for="brp">BRP</label>
-              </li>
-              <li class="filter__item">
-                <input class="filter__checkbox" type="checkbox" name="spark2" id="spark2" checked>
-                <label for="spark2">Spark 2</label>
-              </li>
-              <li class="filter__item">
-                <input class="filter__checkbox" type="checkbox" name="spark3" id="spark3">
-                <label for="spark3">Spark 3</label>
-              </li>
-            </ul>
-            <button class="filter__show-more">Показать еще</button>
-
-        </fieldset>
-        <fieldset class="filter__group">
-
-            <legend class="filter__item">Модель</legend>
-            <button class="filter__btn-show-hide">
-              <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
-            </button>
-
-          <form class="filter__model-form" action="#" method="post">
-            <label class="visually-hidden" for="search-model">Поле поиска по модели</label>
-            <input type="text" class="filter__field-search-model" name="search-model" id="search-model"
-              placeholder="Введите модель">
           </form>
-          <ul class="filter__list">
-            <li class="filter__item">
-              <input class="filter__checkbox" type="checkbox" name="seadoo-spark2" id="seadoo-spark2" checked>
-              <label for="seadoo-spark2">Sea-doo Spark 2</label>
-            </li>
-            <li class="filter__item">
-              <input class="filter__checkbox" type="checkbox" name="seadoo-spark90" id="seadoo-spark90" checked>
-              <label for="seadoo-spark90">SeaDoo Spark 90</label>
-            </li>
-            <li class="filter__item">
-              <input class="filter__checkbox" type="checkbox" name="seadoo-gti155" id="seadoo-gti155">
-              <label for="seadoo-gti155">SeaDoo GTI 155</label>
-            </li>
-            <li class="filter__item">
-              <input class="filter__checkbox" type="checkbox" name="gtr230" id="gtr230">
-              <label for="gtr230">SeaDoo GTR 230</label>
-            </li>
-          </ul>
-          <button class="filter__show-more">Показать еще</button>
-
-    </fieldset>
-    <fieldset class="filter__group">
-
-        <legend class="filter__item">Акции</legend>
-        <button class="filter__btn-show-hide">
-          <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
-        </button>
-
-    </fieldset>
-    <fieldset class="filter__group">
-
-        <legend class="filter__item">Страны</legend>
-        <button class="filter__btn-show-hide">
-          <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
-        </button>
-        <ul class="filter__list">
-          <li class="filter__item">
-            <input class="filter__checkbox" type="checkbox" name="russia" id="russia" checked>
-            <label for="russia">Россия</label>
-          </li>
-          <li class="filter__item">
-            <input class="filter__checkbox" type="checkbox" name="Germany" id="Germany" checked>
-            <label for="Germany">Германия</label>
-          </li>
-          <li class="filter__item">
-            <input class="filter__checkbox" type="checkbox" name="China" id="China">
-            <label for="China">Китай</label>
-          </li>
-          <li class="filter__item">
-            <input class="filter__checkbox" type="checkbox" name="usa" id="usa">
-            <label for="usa">Сша</label>
-          </li>
-        </ul>
-        <button class="filter__show-more">Показать еще</button>
-
-    </fieldset>
-    <div class="filter__wrapper-bottom">
-      <button class="filter__btn-checked" type="submit">Выбрать</button>
-      <button class="filter__extra-options" type="button">Дополнительные параметры</button>
-      <a class="filter__reset" href="#">Сбросить фильтр</a>
-    </div>
-    </section>
+        </section>
 
     <section class="products">
       <h2 class="visually-hidden">Список товаров</h2>
@@ -379,7 +382,7 @@
           <button class="product__add-cart">
             <span class="visually-hidden">Добавить в корзину</span>
           </button>
-          <a class="product__view-link" href="#">
+          <a class="product__view-link" href="jet-ski-brp-seadoo-gti-155hp-se-long-blue-matallic.html">
             <span class="product__view-text">Посмотреть товар</span>
           </a>
         </li>
