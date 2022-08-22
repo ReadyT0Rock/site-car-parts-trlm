@@ -20,8 +20,10 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <a class="logo" href="index.html">
-        <img class="logo__name" src="img/logo-icon-mobile.svg" width="82" height="25"
-          alt="название магазина Драйв мото">
+        <picture>
+          <source media="(min-width: 1171)" srcset="img/logo-icon-desktop.svg" width="80" height="76">
+          <img class="logo__img" src="img/logo-icon-mobile.svg" width="82" height="25" alt="логотип магазина Драйв мото">
+        </picture>
       </a>
       <nav class="navigation">
         <ul class="navigation__list-user">
@@ -53,10 +55,6 @@
             <a class="navigation__site-list__link" href="#">Доставка и оплата</a>
           </li>
         </ul>
-        <a class="logo">
-          <img class="logo__icon" src="img/logo-icon-desktop.svg" width="80" height="76"
-            alt="логотип магазина Драйв мото">
-        </a>
         <ul class="navigation">
           <li class="navigation__item navigation__item--mobile">
             <a class="navigation__link" href="#">Войти</a>
@@ -86,7 +84,7 @@
             <a class="navigation__link" href="#">Катера</a>
           </li>
           <li class="navigation__item navigation__item--current">
-            <a class="navigation__link">Гидроциклы</a>
+            <a class="navigation__link" href="jet-ski.html">Гидроциклы</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="#">Лодки</a>
@@ -136,9 +134,7 @@
         <div class="product-card__wrapper">
           <div class="column-left">
             <span class="product-card__sale">Sale</span>
-            <img class="product-card__img"
-              src="img/jet-ski-brp-seadoo-gti-155hp-se-long-blue-matallic/brp-seadoo-gti-155hp-se-long-blue-metallic.jpg"
-              width="500" height="375" alt="">
+            <img class="product-card__img" src="img/jet-ski-brp-seadoo-gti-155hp-se-long-blue-matallic/brp-seadoo-gti-155hp-se-long-blue-metallic.jpg" width="500" height="375" alt="гидроцикл темно-бирюзового цвета">
             <b class="product-card__price-prev">1 200 475 ₽</b>
             <b class="product-card__price-new">1 100 475 ₽</b>
             <a class="product-card__link-cheaper" href="#">Нашли дешевле? Снизим цену!</a>
@@ -160,8 +156,8 @@
               <li class="rating-star__item">S</li>
             </ul>
             <div class="product-card__btn-wrapper">
-              <button class="product-card__btn product-card__btn--current">Характеристики</button>
-              <button class="product-card__btn">Наличие в магазине</button>
+              <button class="product-card__btn product-card__btn--current" type="button">Характеристики</button>
+              <a class="product-card__btn" href="#self-delivery">Наличие в магазине</a>
             </div>
             <ul class="product-card__list">
               <li class="product-card__item">
@@ -196,35 +192,35 @@
         <div class="product-card-navigation">
           <ul class="product-card-navigation__link">
             <li class="product-card-navigation__item">
-              <a href="" class="product-card-navigation__link">О товаре</a>
+              <a class="product-card-navigation__link" href="#">О товаре</a>
             </li>
             <li class="product-card-navigation__item">
-              <a href="" class="product-card-navigation__link" id="characteristics">Характеристики</a>
+              <a class="product-card-navigation__link" href="#" id="characteristics">Характеристики</a>
             </li>
             <li class="product-card-navigation__item">
-              <a href="" class="product-card-navigation__link">Отзывы</a>
+              <a class="product-card-navigation__link" href="#">Отзывы</a>
             </li>
             <li class="product-card-navigation__item product-card-navigation__item--current">
-              <a href="" class="product-card-navigation__link">Самовывоз</a>
+              <a class="product-card-navigation__link" href="#" id="self-delivery">Самовывоз</a>
             </li>
             <li class="product-card-navigation__item">
-              <a href="" class="product-card-navigation__link">Доставка</a>
+              <a class="product-card-navigation__link" href="#">Доставка</a>
             </li>
             <li class="product-card-navigation__item">
-              <a href="" class="product-card-navigation__link">Cервис</a>
+              <a class="product-card-navigation__link" href="#">Cервис</a>
             </li>
             <li class="product-card-navigation__item">
-              <a href="" class="product-card-navigation__link">Гарантия</a>
+              <a class="product-card-navigation__link" href="#">Гарантия</a>
             </li>
           </ul>
           <div class="self-delivery">
             <form class="self-delivery__form" action="#" method="get">
               <label class="self-delivery__label" for="search-store">Магазин</label>
               <input class="self-delivery__input-search" type="text" name="search-store" id="search-store">
-              <input class="self-delivery__checkbox" type="checkbox" name="today" id="today">
               <label for="today">Забрать сегодня</label>
-              <input class="self-delivery__checkbox" type="checkbox" name="week" id="week">
+              <input class="self-delivery__checkbox" type="checkbox" name="today" id="today">
               <label for="week">Забрать в течение недели</label>
+              <input class="self-delivery__checkbox" type="checkbox" name="week" id="week">
             </form>
             <ul class="self-delivery__list">
               <li class="self-delivery__item">
@@ -302,6 +298,7 @@
                 </ul>
               </li>
             </ul>
+            <a class="self-delivery__show-all-store" href="#">Показать все магазины</a>
           </div>
         </div>
       </div>
@@ -312,22 +309,22 @@
         <h2 class="recommended-products__title">С этим товаром покупают</h2>
         <ul class="product-type">
           <li class="product-type__item">
-            <button class="product-type__btn" type="button">запчасти</button>
+            <a class="product-type__link" href="#">запчасти</a>
           </li>
           <li class="product-type__item">
-            <button class="product-type__btn" type="button">моторы</button>
+            <a class="product-type__link" href="#">моторы</a>
           </li>
           <li class="product-type__item">
-            <button class="product-type__btn" type="button">шины</button>
+            <a class="product-type__link" href="#">шины</a>
           </li>
           <li class="product-type__item product-type__item--current">
-            <button class="product-type__btn" type="button">электроника</button>
+            <a class="product-type__link" href="#">электроника</a>
           </li>
           <li class="product-type__item">
-            <button class="product-type__btn" type="button">инструменты</button>
+            <a class="product-type__link" href="#">инструменты</a>
           </li>
           <li class="product-type__item">
-            <button class="product-type__btn" type="button">аксессуары</button>
+            <a class="product-type__link" href="#">аксессуары</a>
           </li>
         </ul>
         <div class="recommended-products__wrapper">

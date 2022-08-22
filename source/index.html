@@ -20,7 +20,10 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <a class="logo">
-        <img class="logo__name" src="img/logo-icon-mobile.svg" width="82" height="25" alt="название магазина Драйв мото">
+        <picture>
+          <source media="(min-width: 1171)" srcset="img/logo-icon-desktop.svg" width="80" height="76">
+          <img class="logo__img" src="img/logo-icon-mobile.svg" width="82" height="25" alt="логотип магазина Драйв мото">
+        </picture>
       </a>
       <nav class="navigation">
         <ul class="navigation__list-user">
@@ -52,9 +55,6 @@
             <a class="navigation__site-list__link" href="#">Доставка и оплата</a>
           </li>
         </ul>
-        <a class="logo">
-          <img class="logo__icon" src="img/logo-icon-desktop.svg" width="80" height="76" alt="логотип магазина Драйв мото">
-        </a>
         <ul class="navigation">
           <li class="navigation__item navigation__item--mobile">
             <a class="navigation__link" href="#">Войти</a>
@@ -134,7 +134,7 @@
           <div class="slider__toggles">
             <ol class="toggles">
               <li class="toggles__item">
-                <button class="toggles__button toggles__button--current">
+                <button class="toggles__button toggles__button--current" type="button">
                   <span class="visually-hidden">1 слайд</span>
                 </button>
               </li>
@@ -188,13 +188,13 @@
         <form action="#" method="get">
           <ul class="search__list">
             <li class="search__item">
-              <button class="search__button">Поиск по номеру</button>
+              <button class="search__button" button="button">Поиск по номеру</button>
             </li>
             <li class="search__item">
-              <button class="search__button search__button--current">Поиск по марке</button>
+              <button class="search__button search__button--current" button="button">Поиск по марке</button>
             </li>
             <li class="search__item">
-              <button class="search__button">Поиск по названию товара</button>
+              <button class="search__button" button="button">Поиск по названию товара</button>
             </li>
           </ul>
           <div class="search__wrapper">
@@ -221,10 +221,10 @@
           </li>
           <li class="technics__item">
             <div class="technics__wrapper">
-              <a class="technics__link" href="catalog-jet-ski.html">
+              <a class="technics__link" href="jet-ski.html">
                 <h3 class="technics__name">Гидроциклы</h3>
               </a>
-              <a class="technics__link-more" href="catalog-jet-ski.html">Подробнее</a>
+              <a class="technics__link-more" href="jet-ski.html">Подробнее</a>
             </div>
             <img class="technics__img" src="img/index/mobile/technics/jet-ski.png" width="121" height="65" alt="гидроцикл цинего-белого цвета">
           </li>
@@ -273,29 +273,29 @@
         <h2 class="popular-goods__title">Популярные товары</h2>
         <ul class="product-type">
           <li class="product-type__item product-type__item--current">
-            <button class="product-type__btn" type="button">запчасти</button>
+            <a class="product-type__btn" href="#">запчасти</a>
           </li>
           <li class="product-type__item">
-            <button class="product-type__btn" type="button">моторы</button>
+            <a class="product-type__btn" href="#">моторы</a>
           </li>
           <li class="product-type__item">
-            <button class="product-type__btn" type="button">шины</button>
+            <a class="product-type__btn" href="#">шины</a>
           </li>
           <li class="product-type__item">
-            <button class="product-type__btn" type="button">электроника</button>
+            <a class="product-type__btn" href="#">электроника</a>
           </li>
           <li class="product-type__item">
-            <button class="product-type__btn" type="button">инструменты</button>
+            <a class="product-type__btn" href="#">инструменты</a>
           </li>
           <li class="product-type__item">
-            <button class="product-type__btn" type="button">аксессуары</button>
+            <a class="product-type__btn" href="#">аксессуары</a>
           </li>
         </ul>
         <div class="popular-goods-wrapper">
           <ul class="product popular-goods__list">
             <li class="product__item">
               <div class="product__wrapper">
-                <button class="product__btn-favourite">
+                <button class="product__btn-favourite" type="button">
                   <span class="visually-hidden">Добавить в избранное</span>
                 </button>
                 <img class="product__img" src="img/index/popular-goods/rucksack.jpg" width="200" height="200"
@@ -303,7 +303,7 @@
                 <h3 class="product__name">Водонепроницаемый Рюкзак</h3>
                 <b class="product__price">9 800 ₽</b>
               </div>
-              <button class="product__add-cart">
+              <button class="product__add-cart" type="button">
                 <span class="visually-hidden">Добавить в корзину</span>
               </button>
               <a class="product__view-link" href="#">
@@ -313,7 +313,7 @@
             <li class="product__item">
               <div class="product__wrapper">
                 <span class="product__sale">Sale</span>
-                <button class="product__btn-favourite">
+                <button class="product__btn-favourite" type="button">
                   <span class="visually-hidden">Добавить в избранное</span>
                 </button>
                 <img class="product__img" src="img/index/popular-goods/life-vest.jpg" width="200" height="200"
@@ -321,7 +321,7 @@
                 <h3 class="product__name">Спасательный жилет BRP Men's Airflow PFD</h3>
                 <b class="product__price">6 900 ₽</b>
               </div>
-              <button class="product__add-cart">
+              <button class="product__add-cart" type="button">
                 <span class="visually-hidden">Добавить в корзину</span>
               </button>
               <a class="product__view-link" href="#">
@@ -330,14 +330,14 @@
             </li>
             <li class="product__item">
               <div class="product__wrapper">
-                <button class="product__btn-favourite">
+                <button class="product__btn-favourite" type="button">
                   <span class="visually-hidden">Добавить в избранное</span>
                 </button>
                 <img class="product__img" src="img/index/popular-goods/autio-system.jpg" width="200" height="200" alt="аудио система черного цвета">
                 <h3 class="product__name">BRP Audio-Premium System</h3>
                 <b class="product__price">68 000 ₽</b>
               </div>
-              <button class="product__add-cart">
+              <button class="product__add-cart" type="button">
                 <span class="visually-hidden">Добавить в корзину</span>
               </button>
               <a class="product__view-link" href="#">
@@ -347,7 +347,7 @@
             <li class="product__item">
               <div class="product__wrapper">
                 <span class="product__sale">Sale</span>
-                <button class="product__btn-favourite">
+                <button class="product__btn-favourite" type="button">
                   <span class="visually-hidden">Добавить в избранное</span>
                 </button>
                 <img class="product__img" src="img/index/popular-goods/rescue-equipment.jpg" width="200" height="200" alt="спасательное снаряжение: веревка желтого цвета и фанарик в тубе красного цвета">
@@ -361,10 +361,10 @@
             </li>
           </ul>
           <div class="product-control-wrapper">
-            <button class="product-control-wrapper product-control-wrapper--prev">
+            <button class="product-control-wrapper product-control-wrapper--prev" type="button">
               <span class="visually-hidden">листать назад</span>
             </button>
-            <button class="product-control-wrapper product-control-wrapper--next">
+            <button class="product-control-wrapper product-control-wrapper--next" type="button">
               <span class="visually-hidden">листать дальше</span>
             </button>
           </div>
@@ -395,22 +395,22 @@
         <h2 class="recommended-products__title">С этим товаром покупают</h2>
         <ul class="product-type">
           <li class="product-type__item">
-            <button class="product-type__btn" type="button">запчасти</button>
+            <a class="product-type__link" href="#">запчасти</a>
           </li>
           <li class="product-type__item">
-            <button class="product-type__btn" type="button">моторы</button>
+            <a class="product-type__link" href="#">моторы</a>
           </li>
           <li class="product-type__item">
-            <button class="product-type__btn" type="button">шины</button>
+            <a class="product-type__link" href="#">шины</a>
           </li>
           <li class="product-type__item product-type__item--current">
-            <button class="product-type__btn" type="button">электроника</button>
+            <a class="product-type__link" href="#">электроника</a>
           </li>
           <li class="product-type__item">
-            <button class="product-type__btn" type="button">инструменты</button>
+            <a class="product-type__link" href="#">инструменты</a>
           </li>
           <li class="product-type__item">
-            <button class="product-type__btn" type="button">аксессуары</button>
+            <a class="product-type__link" href="#">аксессуары</a>
           </li>
         </ul>
         <div class="recommended-products__wrapper">
@@ -418,7 +418,7 @@
             <li class="product__item">
               <div class="product__wrapper">
                 <span class="product__sale">Sale</span>
-                <button class="product__btn-favourite">
+                <button class="product__btn-favourite" type="button">
                   <span class="visually-hidden">Добавить в избранное</span>
                 </button>
                 <img class="product__img" src="img/index/recommended-products/portable-audio-system.jpg" width="200" height="133" alt="аудио портативная система фирмы брп черного цвета">
@@ -432,14 +432,14 @@
             </li>
             <li class="product__item">
               <div class="product__wrapper">
-                <button class="product__btn-favourite">
+                <button class="product__btn-favourite" type="button">
                   <span class="visually-hidden">Добавить в избранное</span>
                 </button>
                 <img class="product__img" src="img/index/recommended-products/Echomap.jpg" width="200" height="142" alt="эхолокатор фирмы гармин с большим экраном, черного цвета">
                 <h3 class="product__name">Garmin Echomap Plus 62cv</h3>
                 <b class="product__price">45 800 ₽</b>
               </div>
-              <button class="product__add-cart">
+              <button class="product__add-cart" type="button">
                 <span class="visually-hidden">Добавить в корзину</span>
               </button>
               <a class="product__view-link" href="#">
@@ -449,10 +449,10 @@
             <li class="product__item">
               <div class="product__wrapper">
                 <span class="product__sale">Sale</span>
-                <button class="product__btn-favourite product__btn-favourite--added">
+                <button class="product__btn-favourite product__btn-favourite--added" type="button">
                   <span class="visually-hidden">Добавить в избранное</span>
                 </button>
-                <img class="product__img" src="img/index/recommended-products/key.jpg" width="180" height="180" alt="витьеватый ключ">
+                <img class="product__img" src="img/index/recommended-products/key.jpg" width="180" height="180" alt="ключ со спиральным кабелем">
                 <h3 class="product__name">RF D.E.S.S.TM Key</h3>
                 <p class="product__not-available">нет в наличии</p>
                 <a class="product__inform" href="#">Сообщить о поступлении</a>
@@ -463,14 +463,14 @@
             </li>
             <li class="product__item">
               <div class="product__wrapper">
-                <button class="product__btn-favourite">
+                <button class="product__btn-favourite" type="button">
                   <span class="visually-hidden">Добавить в избранное</span>
                 </button>
                 <img class="product__img" src="img/index/recommended-products/suit.jpg" width="200" height="200" alt="мужской плавательный костюм черного цвета с красными вставками">
                 <h3 class="product__name">Мужской костюм 3мм</h3>
                 <b class="product__price">7 000 ₽</b>
               </div>
-              <button class="product__add-cart">
+              <button class="product__add-cart" type="button">
                 <span class="visually-hidden">Добавить в корзину</span>
               </button>
               <a class="product__view-link" href="#">
@@ -479,10 +479,10 @@
             </li>
           </ul>
           <div class="product-control-wrapper">
-            <button class="product-control-wrapper product-control-wrapper--prev">
+            <button class="product-control-wrapper product-control-wrapper--prev" type="button">
               <span class="visually-hidden">листать назад</span>
             </button>
-            <button class="product-control-wrapper product-control-wrapper--next">
+            <button class="product-control-wrapper product-control-wrapper--next" type="button">
               <span class="visually-hidden">листать дальше</span>
             </button>
           </div>
