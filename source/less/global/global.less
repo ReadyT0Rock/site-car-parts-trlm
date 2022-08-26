@@ -1,0 +1,59 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+
+  font-family: "SF Pro Display", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 23.87px;
+  font-weight: 400;
+  color: @main-color-text;
+
+  background-color: @main-bg-color;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
