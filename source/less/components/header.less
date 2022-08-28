@@ -31,6 +31,10 @@
   border: none;
 
   cursor: pointer;
+
+  &--nojs {
+    display: none;
+  }
 }
 
 .header-top__toggle-decorate {
@@ -64,6 +68,22 @@
   &:after {
     bottom: 12px;
     left: 0;
+  }
+
+  &--close {
+    height: 0;
+
+    &:before {
+      top: 0;
+      left: 0;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      top: 0;
+      left: 0;
+      transform: rotate(-45deg);
+    }
   }
 }
 

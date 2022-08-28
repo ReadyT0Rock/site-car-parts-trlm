@@ -12,8 +12,8 @@
   flex-direction: column;
   width: 270px;
   min-height: 403px;
-  padding: 31px;
-  padding-bottom: 15px;
+  padding: 18px;
+  padding-bottom: 31px;
 
   text-align: center;
 
@@ -26,6 +26,10 @@
 
   &--mobile-hidden {
     display: none;
+  }
+
+  &--not-available-padding {
+    padding-bottom: 25px;
   }
 }
 
@@ -62,8 +66,13 @@
 }
 
 .product__img {
-  margin-top: 31px;
-  margin-bottom: 12px;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+}
+
+.product__wrapper {
+  margin-top: auto;
 }
 
 .product__name {
@@ -73,16 +82,24 @@
 
 .product__name,
 .product__not-available {
+  margin: 0;
+
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
 }
 
 .product__not-available {
+  margin-top: 12px;
+  margin-bottom: 17px;
+
   font-weight: 700;
 }
 
 .product__inform {
+  display: block;
+  margin-bottom: 4px;
+
   font-size: 16px;
   line-height: 19px;
   text-decoration: underline;
@@ -90,6 +107,9 @@
 }
 
 .product__price {
+  display: block;
+  margin-top: 25px;
+
   font-family: "Barlow", "Arial", sans-serif;
   font-size: 30px;
   line-height: 36px;
@@ -155,12 +175,16 @@
 // Кнопки слайдера
 .slider-toggles {
   display: grid;
-  grid-template-columns: repeat(3, 22px);
+  grid-template-columns: repeat(3, 14px);
   justify-content: space-between;
   grid-gap: 22px;
   width: 86px;
   margin: 0 auto;
-  margin-bottom: 39px;
+  margin-bottom: 38px;
+
+  &--2 {
+    margin-bottom: 21px;
+  }
 }
 
 .slider-toggles__toggle {
