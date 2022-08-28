@@ -8,108 +8,148 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="img/favicons/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png">
-  <link href="css/style.css  " rel="stylesheet">
   <link rel="manifest" href="manifest.webmanifest">
+  <link href="css/style.css  " rel="stylesheet">
 </head>
 
 <body>
   <header class="header">
-    <div class="containder">
-      <!-- header__toggle--close - внешний вид кнопки при закрытом бургере, header__toggle--nojs - убирает кнопку бургера при открюченном js по умолчанию -->
-      <button class="header__toggle header__toggle--close header__toggle--nojs" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <a class="logo" href="index.html">
-        <picture>
-          <source media="(min-width: 1171)" srcset="img/logo-icon-desktop.svg" width="80" height="76">
-          <img class="logo__img" src="img/logo-icon-mobile.svg" width="82" height="25" alt="логотип магазина Драйв мото">
-        </picture>
-      </a>
-      <nav class="navigation">
-        <ul class="navigation__list-user">
-          <li>
-            <a class="navigation__list-user__link" href="#">
+    <div class="header__container">
+      <div class="header-top">
+        <!-- header__toggle--close - внешний вид кнопки при закрытом бургере, header__toggle--nojs - убирает кнопку бургера при открюченном js по умолчанию -->
+        <button class="header-top__toggle header-top__toggle--close header-top__toggle--nojs" type="button">
+          <span class="header-top__toggle-decorate"></span>
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <a class="logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1440)" srcset="img/logo-icon-desktop.svg" width="80" height="76">
+            <img class="logo__img" src="img/logo-icon-mobile.svg" width="82" height="25" alt="логотип магазина Драйв мото">
+          </picture>
+        </a>
+        <address class="header-top__address">
+          <a class="header-top__address-link" href="#">Москва, ул.Науки 25</a>
+        </address>
+        <ul class="header-top__user-list">
+          <li class="header-top__user-item">
+            <a class="header-top__user-link header-top__user-link--favourite" href="#">
               <span class="visually-hidden">избранное</span>
+              <svg class="header-top__user-icon" width="26" height="22">
+                <use href="img/sprite.svg#icon-favourite"></use>
+              </svg>
             </a>
           </li>
-          <li>
-            <a class="navigation__list-user__link" href="#">
+          <li class="header-top__user-item">
+            <a class="header-top__user-link header-top__user-link--profile" href="#">
               <span class="visually-hidden">профиль</span>
+              <svg class="header-top__user-icon" width="25" height="24">
+                <use href="img/sprite.svg#icon-profile"></use>
+              </svg>
             </a>
           </li>
-          <li>
-            <a class="navigation__list-user__link" href="#">
+          <li class="header-top__user-item">
+            <a class="header-top__user-link header-top__user-link--cart" href="#">
               <span class="visually-hidden">корзина</span>
-              <span class="navigation__list-user__amount">1</span>
+              <svg class="header-top__user-icon" width="31" height="23">
+                <use href="img/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="header-top__user-amount">1</span>
             </a>
           </li>
         </ul>
-        <ul class="navigation__site-list">
-          <li>
-            <a class="navigation__site-list__link" href="#">Магазин</a>
+        <ul class="header-top__list">
+          <li class="header-top__item">
+            <a class="header-top__link" href="#">Магазины</a>
           </li>
-          <li>
-            <a class="navigation__site-list__link" href="#">Акции</a>
+          <li class="header-top__item">
+            <a class="header-top__link" href="#">Акции</a>
           </li>
-          <li>
-            <a class="navigation__site-list__link" href="#">Доставка и оплата</a>
-          </li>
-        </ul>
-        <ul class="navigation">
-          <li class="navigation__item navigation__item--mobile">
-            <a class="navigation__link" href="#">Войти</a>
-          </li>
-          <li class="navigation__item navigation__item--mobile">
-            <a class="navigation__link" href="#">Регистрация</a>
-          </li>
-          <li class="navigation__item navigation__item--mobile">
-            <a class="navigation__link" href="#">Избранное</a>
-          </li>
-          <li class="navigation__item navigation__item--mobile">
-            <a class="navigation__link" href="#">Корзина</a>
-          </li>
-          <li class="navigation__item navigation__item--mobile">
-            <a class="navigation__link" href="#">Магазины</a>
-          </li>
-          <li class="navigation__item navigation__item--mobile">
-            <a class="navigation__link" href="#">Акции</a>
-          </li>
-          <li class="navigation__item navigation__item--mobile">
-            <a class="navigation__link" href="#">Доставка и оплата</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Квадроциклы</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Катера</a>
-          </li>
-          <li class="navigation__item navigation__item--current">
-            <a class="navigation__link">Гидроциклы</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Лодки</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Вездеходы</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Снегоходы</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Двигатели</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Запчасти</a>
-          </li>
-          <li class="navigation">
-            <p class="navigation__text-address">Москва, ул.Науки 25</p>
+          <li class="header-top__item">
+            <a class="header-top__link" href="#">Доставка и оплата</a>
           </li>
         </ul>
-      </nav>
-      <address class="header__address">
-        <a class="header__address-link" href="#">Москва, ул.Науки 25</a>
-      </address>
+      </div>
     </div>
+    <nav class="navigation navigation--closed navigation--nojs">
+      <ul class="navigation__list">
+        <li class="navigation__item navigation__item--mobile">
+          <a class="navigation__link" href="#">Войти
+            <svg class="navigation__icon" width="25" height="24">
+              <use href="img/sprite.svg#icon-profile"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="navigation__item navigation__item--mobile">
+          <a class="navigation__link" href="#">Регистрация
+            <svg class="navigation__icon" width="25" height="24">
+              <use href="img/sprite.svg#icon-profile"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="navigation__item navigation__item--mobile">
+          <a class="navigation__link" href="#">Избранное
+            <svg class="navigation__icon" width="26" height="22">
+            <use href="img/sprite.svg#icon-favourite"></use>
+          </svg>
+          </a>
+        </li>
+        <li class="navigation__item navigation__item--mobile">
+         <a class="navigation__link" href="#">Корзина
+            <svg class="navigation__icon" width="31" height="23">
+              <use href="img/sprite.svg#icon-cart"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="navigation__item navigation__item--mobile">
+          <a class="navigation__link" href="#">Магазины
+            <svg class="navigation__icon navigation__icon--position navigation__icon--stores" width="18" height="22">
+              <use href="img/sprite.svg#icon-stores"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="navigation__item navigation__item--mobile">
+          <a class="navigation__link" href="#">Акции
+            <svg class="navigation__icon navigation__icon--position" width="17" height="17">
+              <use href="img/sprite.svg#icon-stocks"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="navigation__item navigation__item--mobile">
+          <a class="navigation__link" href="#">Доставка и оплата
+            <svg class="navigation__icon navigation__icon--position navigation__icon--delivery" width="18" height="17">
+              <use href="img/sprite.svg#icon-delivery-payment"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Квадроциклы</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Катера</a>
+        </li>
+        <li class="navigation__item navigation__item--current">
+          <a class="navigation__link" href="jet-ski.html">Гидроциклы</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Лодки</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Вездеходы</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Снегоходы</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Двигатели</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Запчасти</a>
+        </li>
+        <li class="navigation__item navigation__item--address">
+          <p class="navigation__text-address">Москва, ул.Науки 25</p>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <main class="main">
@@ -287,16 +327,17 @@
               </button>
               <form class="filter-jet-ski__model-form" action="#" method="post">
                 <label class="visually-hidden" for="search-model">Поле поиска по модели</label>
-                <input type="text" class="filter-jet-ski__field-search-model" name="search-model" id="search-model"
-                  placeholder="Введите модель">
+                <input type="text" class="filter-jet-ski__field-search-model" name="search-model" id="search-model" placeholder="Введите модель">
               </form>
               <ul class="filter-jet-ski__list">
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="seadoo-spark2" id="seadoo-spark2" checked>
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="seadoo-spark2" id="seadoo-spark2"
+                    checked>
                   <label for="seadoo-spark2">Sea-doo Spark 2</label>
                 </li>
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="seadoo-spark90" id="seadoo-spark90" checked>
+                  <input class="filter-jet-ski__checkbox" type="checkbox" name="seadoo-spark90" id="seadoo-spark90"
+                    checked>
                   <label for="seadoo-spark90">SeaDoo Spark 90</label>
                 </li>
                 <li class="filter-jet-ski__item">
@@ -367,265 +408,87 @@
           </form>
         </section>
 
-    <section class="products">
-      <h2 class="visually-hidden">Список товаров</h2>
-      <ul class="product products__list">
-        <li class="product__item">
-          <div class="product__wrapper">
-            <button class="product__btn-favourite">
-              <span class="visually-hidden">Добавить в избранное</span>
-            </button>
-            <img class="product__img" src="img/jet-ski/products/brp-seadoo-gti-130hp-se-long-black-mango.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
-            <h3 class="product__name">Гидроцикл BRP SeaDoo GTI 130hp SE Black\Mango</h3>
-            <b class="product__price">1 049 500 ₽</b>
-          </div>
-          <button class="product__add-cart">
-            <span class="visually-hidden">Добавить в корзину</span>
-          </button>
-          <a class="product__view-link" href="jet-ski-brp-seadoo-gti-155hp-se-long-blue-matallic.html">
-            <span class="product__view-text">Посмотреть товар</span>
-          </a>
-        </li>
-        <li class="product__item">
-          <div class="product__wrapper">
-            <span class="product__sale">Sale</span>
-            <button class="product__btn-favourite">
-              <span class="visually-hidden">Добавить в избранное</span>
-            </button>
-            <img class="product__img" src="img/jet-ski/products/brp-seadoo-gti-155hp-se-long-blue-metallic.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
-            <h3 class="product__name">Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</h3>
-            <b class="product__price">1 100 475 ₽</b>
-          </div>
-          <button class="product__add-cart">
-            <span class="visually-hidden">Добавить в корзину</span>
-          </button>
-          <a class="product__view-link" href="jet-ski-brp-seadoo-gti-155hp-se-long-blue-matallic.html">
-            <span class="product__view-text">Посмотреть товар</span>
-          </a>
-        </li>
-        <li class="product__item">
-          <div class="product__wrapper">
-            <button class="product__btn-favourite">
-              <span class="visually-hidden">Добавить в избранное</span>
-            </button>
-            <img class="product__img" src="img/jet-ski/products/brp-seadoo-gtr-230hp-x-california-green.jpg" width="250" height="190" alt="эхолокатор фирмы гармин с большим экраном, черного цвета">
-            <h3 class="product__name">Гидроцикл BRP SeaDoo GTR 230hp X California green </h3>
-            <b class="product__price">1 323 700 ₽</b>
-          </div>
-          <button class="product__add-cart">
-            <span class="visually-hidden">Добавить в корзину</span>
-          </button>
-          <a class="product__view-link" href="#">
-            <span class="product__view-text">Посмотреть товар</span>
-          </a>
-        </li>
-        <li class="product__item">
-          <div class="product__wrapper">
-            <span class="product__sale">Sale</span>
-            <button class="product__btn-favourite">
-              <span class="visually-hidden">Добавить в избранное</span>
-            </button>
-            <img class="product__img" src="img/jet-ski/products/brp-seadoo-gtr-230hp-std-black-gulfstream.jpg" width="250" height="190" alt="витьеватый ключ">
-            <h3 class="product__name">Гидроцикл BRP SeaDoo GTR 230hp STD Black / Gulfstream</h3>
-            <p class="product__not-available">нет в наличии</p>
-            <a class="product__inform" href="#">Сообщить о поступлении</a>
-          </div>
-          <a class="product__view-link" href="#">
-            <span class="product__view-text">Посмотреть товар</span>
-          </a>
-        </li>
-        <li class="product__item">
-          <div class="product__wrapper">
-            <button class="product__btn-favourite">
-              <span class="visually-hidden">Добавить в избранное</span>
-            </button>
-            <img class="product__img" src="img/jet-ski/products/brp-seadoo-gtx-300hp-ltd-liquid-metal.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
-            <h3 class="product__name">Гидроцикл BRP SeaDoo GTX 300hp LTD Liquid Metal</h3>
-            <b class="product__price">1 543 000 ₽</b>
-          </div>
-          <button class="product__add-cart">
-            <span class="visually-hidden">Добавить в корзину</span>
-          </button>
-          <a class="product__view-link" href="#">
-            <span class="product__view-text">Посмотреть товар</span>
-          </a>
-        </li>
-        <li class="product__item">
-          <div class="product__wrapper">
-            <button class="product__btn-favourite">
-              <span class="visually-hidden">Добавить в избранное</span>
-            </button>
-            <img class="product__img" src="img/jet-ski/products/brp-seadoo-spark-60hp-2up.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
-            <h3 class="product__name">Гидроцикл BRP SeaDoo Spark 60hp 2 up</h3>
-            <b class="product__price">732 345 ₽</b>
-          </div>
-          <button class="product__add-cart">
-            <span class="visually-hidden">Добавить в корзину</span>
-          </button>
-          <a class="product__view-link" href="#">
-            <span class="product__view-text">Посмотреть товар</span>
-          </a>
-        </li>
-        <li class="product__item">
-          <div class="product__wrapper">
-            <button class="product__btn-favourite">
-              <span class="visually-hidden">Добавить в избранное</span>
-            </button>
-            <img class="product__img" src="img/jet-ski/products/brp-seadoo-spark-gts-90hp-rental.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
-            <h3 class="product__name">Гидроцикл BRP SeaDoo Spark GTS 90hp Rental</h3>
-            <b class="product__price">857 666 ₽</b>
-          </div>
-          <button class="product__add-cart">
-            <span class="visually-hidden">Добавить в корзину</span>
-          </button>
-          <a class="product__view-link" href="#">
-            <span class="product__view-text">Посмотреть товар</span>
-          </a>
-        </li>
-        <li class="product__item">
-          <div class="product__wrapper">
-            <span class="product__sale">Sale</span>
-            <button class="product__btn-favourite">
-              <span class="visually-hidden">Добавить в избранное</span>
-            </button>
-            <img class="product__img" src="img/jet-ski/products/brp-seadoo-wake-230hp-pro-teal-bluel.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
-            <h3 class="product__name">Гидроцикл BRP SeaDoo WAKE 230hp PRO Teal blue
-            </h3>
-            <b class="product__price">1 229 711 ₽</b>
-          </div>
-          <button class="product__add-cart">
-            <span class="visually-hidden">Добавить в корзину</span>
-          </button>
-          <a class="product__view-link" href="#">
-            <span class="product__view-text">Посмотреть товар</span>
-          </a>
-        </li>
-        <li class="product__item">
-          <div class="product__wrapper">
-            <button class="product__btn-favourite">
-              <span class="visually-hidden">Добавить в избранное</span>
-            </button>
-            <img class="product__img" src="img/jet-ski/products/spark2up-900-ho-ace-chili-pepper.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
-            <h3 class="product__name">Гидроцикл Spark 2-UP 900 Ho Ace Chili Pepper</h3>
-            <b class="product__price">587 440 ₽</b>
-          </div>
-          <button class="product__add-cart">
-            <span class="visually-hidden">Добавить в корзину</span>
-          </button>
-          <a class="product__view-link" href="#">
-            <span class="product__view-text">Посмотреть товар</span>
-          </a>
-        </li>
-        <li class="product__item">
-          <div class="product__wrapper">
-            <button class="product__btn-favourite">
-              <span class="visually-hidden">Добавить в избранное</span>
-            </button>
-            <img class="product__img" src="img/jet-ski/products/spark2up-900-ho-ace-pineapple.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
-            <h3 class="product__name">Гидроцикл Spark 2-UP 900 Ho Ace Pineapple </h3>
-            <b class="product__price">587 440 ₽</b>
-          </div>
-          <button class="product__add-cart">
-            <span class="visually-hidden">Добавить в корзину</span>
-          </button>
-          <a class="product__view-link" href="#">
-            <span class="product__view-text">Посмотреть товар</span>
-          </a>
-        </li>
-        <li class="product__item">
-          <div class="product__wrapper">
-            <span class="product__sale">Sale</span>
-            <button class="product__btn-favourite">
-              <span class="visually-hidden">Добавить в избранное</span>
-            </button>
-            <img class="product__img" src="img/jet-ski/products/brp-seadoo-spark2up-900-ace-vanilla.jpg" width="250" height="190" alt="витьеватый ключ">
-            <h3 class="product__name">Гидроцикл BRP Sea-doo Spark 2-UP 900 Ace Vanilla </h3>
-            <p class="product__not-available">нет в наличии</p>
-            <a class="product__inform" href="#">Сообщить о поступлении</a>
-            <a class="product__view-link" href="#">
-              <span class="product__view-text">Посмотреть товар</span>
-            </a>
-          </div>
-        </li>
-        <li class="product__item">
-          <div class="product__wrapper">
-            <span class="product__sale">Sale</span>
-            <button class="product__btn-favourite">
-              <span class="visually-hidden">Добавить в избранное</span>
-            </button>
-            <img class="product__img" src="img/jet-ski/products/spark3up-900-ho-ace-ibr-blueberry.jpg" width="250" height="190" alt="витьеватый ключ">
-            <h3 class="product__name">Гидроцикл Spark 3-UP 900 HO Ace IBR Blueberry</h3>
-            <p class="product__not-available">нет в наличии</p>
-            <a class="product__inform" href="#">Сообщить о поступлении</a>
-            <a class="product__view-link" href="#">
-              <span class="product__view-text">Посмотреть товар</span>
-            </a>
-          </div>
-        </li>
-      </ul>
-      <a class="btn-show-more products__btn-show-more" href="#">Показать ещё</a>
-      <div class="pagination">
-        <ul class="pagination__list">
-          <li class="pagination__item">
-            <a class="pagination__link" href="#">1</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="#">2</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="#">3</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="#">4</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="#">5</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="#">...</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="#">11</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-    </div>
-  </div>
-
-    <section class="recommended-products">
-      <div class="container">
-        <h2 class="recommended-products__title">С этим товаром покупают</h2>
-        <ul class="product-type">
-          <li class="product-type__item">
-            <button class="product-type__btn" type="button">запчасти</button>
-          </li>
-          <li class="product-type__item">
-            <button class="product-type__btn" type="button">моторы</button>
-          </li>
-          <li class="product-type__item">
-            <button class="product-type__btn" type="button">шины</button>
-          </li>
-          <li class="product-type__item product-type__item--current">
-            <button class="product-type__btn" type="button">электроника</button>
-          </li>
-          <li class="product-type__item">
-            <button class="product-type__btn" type="button">инструменты</button>
-          </li>
-          <li class="product-type__item">
-            <button class="product-type__btn" type="button">аксессуары</button>
-          </li>
-        </ul>
-        <div class="recommended-products__wrapper">
-          <ul class="product recommended-products__list">
+        <section class="products">
+          <h2 class="visually-hidden">Список товаров</h2>
+          <ul class="product products__list">
             <li class="product__item">
-              <div class="product__wrapper">
+                <button class="product__btn-favourite">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
+                </button>
+                <img class="product__img" src="img/jet-ski/products/brp-seadoo-gti-130hp-se-long-black-mango.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
+                <div class="product__wrapper">
+                <h3 class="product__name">Гидроцикл BRP SeaDoo GTI 130hp SE Black\Mango</h3>
+                <b class="product__price">1 049 500 ₽</b>
+              </div>
+              <button class="product__add-cart">
+                <span class="visually-hidden">Добавить в корзину</span>
+                <svg class="product__icon-cart" width="31" height="23">
+                  <use href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </button>
+              <a class="product__view-link" href="jet-ski-brp-seadoo-gti-155hp-se-long-blue-matallic.html">
+                <span class="product__view-text">Посмотреть товар</span>
+              </a>
+            </li>
+            <li class="product__item">
                 <span class="product__sale">Sale</span>
                 <button class="product__btn-favourite">
                   <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
                 </button>
-                <img class="product__img" src="img/index/recommended-products/portable-audio-system.jpg" width="200" height="133" alt="аудио портативная система фирмы брп черного цвета">
-                <h3 class="product__name">BRP Audio-портативная система</h3>
+                <img class="product__img" src="img/jet-ski/products/brp-seadoo-gti-155hp-se-long-blue-metallic.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
+                <div class="product__wrapper">
+                <h3 class="product__name">Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</h3>
+                <b class="product__price">1 100 475 ₽</b>
+              </div>
+              <button class="product__add-cart">
+                <span class="visually-hidden">Добавить в корзину</span>
+                <svg class="product__icon-cart" width="31" height="23">
+                  <use href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </button>
+              <a class="product__view-link" href="jet-ski-brp-seadoo-gti-155hp-se-long-blue-matallic.html">
+                <span class="product__view-text">Посмотреть товар</span>
+              </a>
+            </li>
+            <li class="product__item">
+                <button class="product__btn-favourite">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
+                </button>
+                <img class="product__img" src="img/jet-ski/products/brp-seadoo-gtr-230hp-x-california-green.jpg" width="250" height="190" alt="эхолокатор фирмы гармин с большим экраном, черного цвета">
+                <div class="product__wrapper">
+                <h3 class="product__name">Гидроцикл BRP SeaDoo GTR 230hp X California green </h3>
+                <b class="product__price">1 323 700 ₽</b>
+              </div>
+              <button class="product__add-cart">
+                <span class="visually-hidden">Добавить в корзину</span>
+                <svg class="product__icon-cart" width="31" height="23">
+                  <use href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </button>
+              <a class="product__view-link" href="#">
+                <span class="product__view-text">Посмотреть товар</span>
+              </a>
+            </li>
+            <li class="product__item product__item--not-available-padding">
+                <span class="product__sale">Sale</span>
+                <button class="product__btn-favourite">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
+                </button>
+                <img class="product__img" src="img/jet-ski/products/brp-seadoo-gtr-230hp-std-black-gulfstream.jpg" width="250" height="190" alt="витьеватый ключ">
+                <div class="product__wrapper">
+                <h3 class="product__name">Гидроцикл BRP SeaDoo GTR 230hp STD Black / Gulfstream</h3>
                 <p class="product__not-available">нет в наличии</p>
                 <a class="product__inform" href="#">Сообщить о поступлении</a>
               </div>
@@ -634,58 +497,312 @@
               </a>
             </li>
             <li class="product__item">
-              <div class="product__wrapper">
                 <button class="product__btn-favourite">
                   <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
                 </button>
-                <img class="product__img" src="img/index/recommended-products/Echomap.jpg" width="200" height="142" alt="эхолокатор фирмы гармин с большим экраном, черного цвета">
-                <h3 class="product__name">Garmin Echomap Plus 62cv</h3>
-                <b class="product__price">45 800 ₽</b>
+                <img class="product__img" src="img/jet-ski/products/brp-seadoo-gtx-300hp-ltd-liquid-metal.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
+                <div class="product__wrapper">
+                <h3 class="product__name">Гидроцикл BRP SeaDoo GTX 300hp LTD Liquid Metal</h3>
+                <b class="product__price">1 543 000 ₽</b>
               </div>
               <button class="product__add-cart">
                 <span class="visually-hidden">Добавить в корзину</span>
+                <svg class="product__icon-cart" width="31" height="23">
+                  <use href="img/sprite.svg#icon-cart"></use>
+                </svg>
               </button>
               <a class="product__view-link" href="#">
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
             <li class="product__item">
-              <div class="product__wrapper">
-                <span class="product__sale">Sale</span>
-                <button class="product__btn-favourite product__btn-favourite--added">
+                <button class="product__btn-favourite">
                   <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
                 </button>
-                <img class="product__img" src="img/index/recommended-products/key.jpg" width="180" height="180" alt="витьеватый ключ">
-                <h3 class="product__name">RF D.E.S.S.TM Key</h3>
-                <p class="product__not-available">нет в наличии</p>
-                <a class="product__inform" href="#">Сообщить о поступлении</a>
+                <img class="product__img" src="img/jet-ski/products/brp-seadoo-spark-60hp-2up.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
+                <div class="product__wrapper">
+                <h3 class="product__name">Гидроцикл BRP SeaDoo Spark 60hp 2 up</h3>
+                <b class="product__price">732 345 ₽</b>
               </div>
+              <button class="product__add-cart">
+                <span class="visually-hidden">Добавить в корзину</span>
+                <svg class="product__icon-cart" width="31" height="23">
+                  <use href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </button>
               <a class="product__view-link" href="#">
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
             <li class="product__item">
-              <div class="product__wrapper">
                 <button class="product__btn-favourite">
                   <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
+                </button>
+                <img class="product__img" src="img/jet-ski/products/brp-seadoo-spark-gts-90hp-rental.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
+                <div class="product__wrapper">
+                <h3 class="product__name">Гидроцикл BRP SeaDoo Spark GTS 90hp Rental</h3>
+                <b class="product__price">857 666 ₽</b>
+              </div>
+              <button class="product__add-cart">
+                <span class="visually-hidden">Добавить в корзину</span>
+                <svg class="product__icon-cart" width="31" height="23">
+                  <use href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </button>
+              <a class="product__view-link" href="#">
+                <span class="product__view-text">Посмотреть товар</span>
+              </a>
+            </li>
+            <li class="product__item">
+                <span class="product__sale">Sale</span>
+                <button class="product__btn-favourite">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
+                </button>
+                <img class="product__img" src="img/jet-ski/products/brp-seadoo-wake-230hp-pro-teal-bluel.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
+                <div class="product__wrapper">
+                <h3 class="product__name">Гидроцикл BRP SeaDoo WAKE 230hp PRO Teal blue</h3>
+                <b class="product__price">1 229 711 ₽</b>
+              </div>
+              <button class="product__add-cart">
+                <span class="visually-hidden">Добавить в корзину</span>
+                <svg class="product__icon-cart" width="31" height="23">
+                  <use href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </button>
+              <a class="product__view-link" href="#">
+                <span class="product__view-text">Посмотреть товар</span>
+              </a>
+            </li>
+            <li class="product__item">
+                <button class="product__btn-favourite">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
+                </button>
+                <img class="product__img" src="img/jet-ski/products/spark2up-900-ho-ace-chili-pepper.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
+                <div class="product__wrapper">
+                <h3 class="product__name">Гидроцикл Spark 2-UP 900 Ho Ace Chili Pepper</h3>
+                <b class="product__price">587 440 ₽</b>
+              </div>
+              <button class="product__add-cart">
+                <span class="visually-hidden">Добавить в корзину</span>
+                <svg class="product__icon-cart" width="31" height="23">
+                  <use href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </button>
+              <a class="product__view-link" href="#">
+                <span class="product__view-text">Посмотреть товар</span>
+              </a>
+            </li>
+            <li class="product__item">
+
+                <button class="product__btn-favourite">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
+                </button>
+                <img class="product__img" src="img/jet-ski/products/spark2up-900-ho-ace-pineapple.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
+                <div class="product__wrapper">
+                <h3 class="product__name">Гидроцикл Spark 2-UP 900 Ho Ace Pineapple </h3>
+                <b class="product__price">587 440 ₽</b>
+              </div>
+              <button class="product__add-cart">
+                <span class="visually-hidden">Добавить в корзину</span>
+                <svg class="product__icon-cart" width="31" height="23">
+                  <use href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </button>
+              <a class="product__view-link" href="#">
+                <span class="product__view-text">Посмотреть товар</span>
+              </a>
+            </li>
+            <li class="product__item">
+                <span class="product__sale">Sale</span>
+                <button class="product__btn-favourite">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
+                </button>
+                <img class="product__img" src="img/jet-ski/products/brp-seadoo-spark2up-900-ace-vanilla.jpg" width="250" height="190" alt="витьеватый ключ">
+                <div class="product__wrapper">
+                <h3 class="product__name">Гидроцикл BRP Sea-doo Spark 2-UP 900 Ace Vanilla </h3>
+                <p class="product__not-available">нет в наличии</p>
+                <a class="product__inform" href="#">Сообщить о поступлении</a>
+              </div>
+                <a class="product__view-link" href="#">
+                  <span class="product__view-text">Посмотреть товар</span>
+                </a>
+            </li>
+            <li class="product__item product__item--not-available-padding">
+                <span class="product__sale">Sale</span>
+                <button class="product__btn-favourite">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
+                </button>
+                <img class="product__img" src="img/jet-ski/products/spark3up-900-ho-ace-ibr-blueberry.jpg" width="250" height="190" alt="витьеватый ключ">
+                <div class="product__wrapper">
+                <h3 class="product__name">Гидроцикл Spark 3-UP 900 HO Ace IBR Blueberry</h3>
+                <p class="product__not-available">нет в наличии</p>
+                <a class="product__inform" href="#">Сообщить о поступлении</a>
+              </div>
+                <a class="product__view-link" href="#">
+                  <span class="product__view-text">Посмотреть товар</span>
+                </a>
+
+            </li>
+          </ul>
+          <a class="btn-show-more products__btn-show-more" href="#">Показать ещё</a>
+          <div class="pagination">
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">1</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">3</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">4</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">5</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">...</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">11</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section class="recommended-products">
+      <div class="container">
+        <h2 class="recommended-products__title">С этим товаром покупают</h2>
+        <ul class="product-type">
+          <li class="product-type__item product-type__item--current">
+            <a class="product-type__link product-type__link--current" href="#">запчасти</a>
+          </li>
+          <li class="product-type__item">
+            <a class="product-type__link" href="#">моторы</a>
+          </li>
+          <li class="product-type__item">
+            <a class="product-type__link" href="#">шины</a>
+          </li>
+          <li class="product-type__item">
+            <a class="product-type__link" href="#">электроника</a>
+          </li>
+          <li class="product-type__item">
+            <a class="product-type__link" href="#">инструменты</a>
+          </li>
+          <li class="product-type__item">
+            <a class="product-type__link" href="#">аксессуары</a>
+          </li>
+        </ul>
+        <div class="recommended-products__wrapper">
+          <ul class="product recommended-products__list">
+            <li class="product__item product__item--not-available-padding">
+                <span class="product__sale">Sale</span>
+                <button class="product__btn-favourite" type="button">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
+                </button>
+                <img class="product__img" src="img/index/recommended-products/portable-audio-system.jpg" width="200" height="133" alt="аудио портативная система фирмы брп черного цвета">
+                <div class="product__wrapper">
+                <h3 class="product__name">BRP Audio-портативная система</h3>
+                <p class="product__not-available">нет в наличии</p>
+                <a class="product__inform" href="#">Сообщить о поступлении</a>
+                </div>
+              <a class="product__view-link" href="#">
+                <span class="product__view-text">Посмотреть товар</span>
+              </a>
+            </li>
+            <li class="product__item product__item--mobile-hidden">
+                <button class="product__btn-favourite" type="button">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
+                </button>
+                <img class="product__img" src="img/index/recommended-products/Echomap.jpg" width="200" height="142" alt="эхолокатор фирмы гармин с большим экраном, черного цвета">
+                <h3 class="product__name">Garmin Echomap Plus 62cv</h3>
+                <b class="product__price">45 800 ₽</b>
+              <button class="product__add-cart" type="button">
+                <span class="visually-hidden">Добавить в корзину</span>
+                <svg class="product__icon-cart" width="31" height="23">
+                  <use href="img/sprite.svg#icon-cart"></use>
+                </svg>
+              </button>
+              <a class="product__view-link" href="#">
+                <span class="product__view-text">Посмотреть товар</span>
+              </a>
+            </li>
+            <li class="product__item product__item--mobile-hidden product__item--not-available-padding">
+                <span class="product__sale">Sale</span>
+                <button class="product__btn-favourite product__btn-favourite--added" type="button">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
+                </button>
+                <img class="product__img" src="img/index/recommended-products/key.jpg" width="180" height="180" alt="ключ со спиральным кабелем">
+                <h3 class="product__name">RF D.E.S.S.TM Key</h3>
+                <p class="product__not-available">нет в наличии</p>
+                <a class="product__inform" href="#">Сообщить о поступлении</a>
+              <a class="product__view-link" href="#">product
+                <span class="product__view-text">Посмотреть товар</span>
+              </a>
+            </li>
+            <li class="product__item product__item--mobile-hidden">
+                <button class="product__btn-favourite" type="button">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
                 </button>
                 <img class="product__img" src="img/index/recommended-products/suit.jpg" width="200" height="200" alt="мужской плавательный костюм черного цвета с красными вставками">
                 <h3 class="product__name">Мужской костюм 3мм</h3>
                 <b class="product__price">7 000 ₽</b>
-              </div>
-              <button class="product__add-cart">
+              <button class="product__add-cart" type="button">
                 <span class="visually-hidden">Добавить в корзину</span>
+                <svg class="product__icon-cart" width="31" height="23">
+                  <use href="img/sprite.svg#icon-cart"></use>
+                </svg>
               </button>
               <a class="product__view-link" href="#">
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
           </ul>
-          <div class="product-control-wrapper">
-            <button class="product-control-wrapper product-control-wrapper--prev">
+          <div class="product-control">
+            <button class="product-control__btn product-control__btn--prev" type="button">
               <span class="visually-hidden">листать назад</span>
             </button>
-            <button class="product-control-wrapper product-control-wrapper--next">
+            <button class="product-control__btn product-control__btn--next" type="button">
               <span class="visually-hidden">листать дальше</span>
             </button>
           </div>
@@ -698,24 +815,24 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
-    <div class="container">
+
+    <div class="footer__container">
       <div class="footer__top">
         <div class="footer__column subscribe">
           <p class="subscribe__text">Подпишитесь на нашу рассылку и узнавайте о акция быстрее</p>
-          <form action="#" method="post">
+          <form class="subscribe__form" action="#" method="post">
             <label class="visually-hidden" for="e-mail"></label>
             <input class="subscribe__field" type="text" name="e-mail" id="e-mail" placeholder="Введите ваш e-mail:">
-            <button class="subscribe__btn">Отправить</button>
+            <button class="subscribe__btn" type="submit">Отправить</button>
           </form>
         </div>
         <div class="footer__column">
           <div>
-            <button class="footer__text" type="button">Информация</button>
-            <ul class="footer__list">
+            <button class="footer__text footer__text--information" type="button">Информация</button>
+            <ul class="footer__list footer__list--information footer__list--information-closed footer__list--nojs">
               <li class="footer__item">
                 <a class="footer__link" href="#">О компании</a>
               </li>
@@ -731,8 +848,8 @@
             </ul>
           </div>
           <div>
-            <button class="footer__text" type="button">Интернет-магазин</button>
-            <ul class="footer__list">
+            <button class="footer__text footer__text--store" type="button">Интернет-магазин</button>
+            <ul class="footer__list footer__list--store footer__list--store-closed footer__list--nojs">
               <li class="footer__item">
                 <a class="footer__link" href="#">Доставка и самовывоз</a>
               </li>
@@ -753,21 +870,33 @@
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Мы в инстаграм</span>
+                <svg class="social__icon" width="30" height="30">
+                  <use href="img/sprite.svg#icon-instargram"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Мы в контакте</span>
+                <svg width="30" height="18">
+                  <use href="img/sprite.svg#icon-vk"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Мы в фейсбук</span>
+                <svg width="30" height="30">
+                  <use href="img/sprite.svg#icon-facebook"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Мы в ютьюб</span>
+                <svg width="30" height="30">
+                  <use href="img/sprite.svg#icon-youtube"></use>
+                </svg>
               </a>
             </li>
           </ul>
@@ -778,8 +907,8 @@
         <a href="" class="footer__link-bottom">Политика обработки персональных данных</a>
       </div>
     </div>
-  </footer>
 
+  </footer>
   <script src="js/script.js">
 
   </script>

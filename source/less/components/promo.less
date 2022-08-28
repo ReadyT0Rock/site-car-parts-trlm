@@ -1,0 +1,55 @@
+.promo {
+  position: relative;
+
+  min-height: 601px;
+  margin-bottom: 80px;
+}
+
+.promo__container {
+  width: @mobile-width;
+  margin: 0 auto;
+}
+
+.slider {
+  margin-bottom: 34px;
+}
+
+.slider__control {
+  display: none;
+}
+
+.slider__toggles {
+  position: absolute;
+  top: 128px;
+
+  width: @mobile-width;
+}
+
+.toggles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.toggles__item {
+  width: 7px;
+  height: 7px;
+  margin-right: 5.76px;
+}
+
+.toggles__button {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+
+  background-color: transparent;
+  border: 1.5px solid #ffffff;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &--current {
+    background-color: #ffffff;
+    border: none;
+  }
+}

@@ -1,0 +1,112 @@
+.search__container {
+  width: @mobile-width;
+  margin: 0 auto;
+  padding-left: 10px;
+  margin-bottom: 80px;
+}
+
+.search__list {
+  display: flex;
+  min-width: 310px;
+  margin-bottom: 9px;
+
+  overflow-x: scroll;
+}
+
+.search__list::-webkit-scrollbar {
+  width: 0;
+}
+
+.search__item {
+  position: relative;
+
+  min-height: 29px;
+  margin-right: 10px;
+
+  &--current::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 2px;
+
+    background-color: @second-bg-color;
+  }
+}
+
+.search__button {
+  min-height: 100%;
+  padding: 0;
+
+  font-family: "SF Pro Display", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 23.87px;
+  font-weight: 400;
+  white-space: nowrap;
+
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &--current {
+    font-weight: 600;
+  }
+}
+
+.search__wrapper {
+  display: flex;
+  padding-right: 10px;
+}
+
+.search__field {
+  width: 100%;
+  min-height: 50px;
+  padding: 15px 10px;
+
+  background-color: transparent;
+  border: none;
+
+  &::placeholder {
+    font-family: "SF Pro Display", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    color: @main-color-text;
+  }
+}
+
+.search__field-btn {
+  width: 60px;
+  min-height: 50px;
+
+  font-size: 0;
+
+  background: transparent url("../../img/index/search/search.svg") no-repeat;
+  background-size: 24px 24px;
+  background-position: center;
+  border: none;
+
+  cursor: pointer;
+}
+
+@media (min-width: @desktop-width) {
+  .search__btn {
+    width: 145px;
+    min-height: 50px;
+
+    font-family: "SF Pro Display", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 16.71px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+
+    background-color: @second-bg-color;
+    border: none;
+    border-radius: 3px;
+  }
+}

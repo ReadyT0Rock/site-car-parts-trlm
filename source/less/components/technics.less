@@ -1,0 +1,97 @@
+.technics__container {
+  width: @mobile-width;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  padding: 0 16px;
+}
+
+.technics__list {
+  display: grid;
+  grid-template-columns: ~"1 / -1";
+  grid-gap: 30px;
+  width: 100%;
+}
+
+.technics__item {
+  position: relative;
+
+  width: 288px;
+  min-height: 129px;
+  padding: 18px;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+
+  &:hover {
+    box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+  }
+
+  &:hover .technics__link {
+    color: @second-color-text;
+  }
+}
+
+.technics__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.technics__link {
+  color: @main-color-text;
+}
+
+.technics__link-more {
+  position: relative;
+
+  margin-top: 46px;
+
+  font-size: 14px;
+  line-height: 17px;
+  color: #c4c4c4;
+}
+
+.technics__name {
+  margin: 0;
+
+  font-family: "Barlow", "Arial", sans-serif;
+  font-size: 25px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.technics__img {
+  position: absolute;
+  top: 0;
+
+  &--quad-bike {
+    top: 48px;
+    left: 185px;
+  }
+
+  &--jet-ski {
+    top: 52px;
+    left: 154px;
+  }
+
+  &--boat {
+    top: 41px;
+    left: 121px;
+  }
+
+  &--snow-vehicle {
+    top: 38px;
+    left: 154px;
+  }
+
+  &--cross-country-vehicle {
+    top: 43px;
+    left: 158px;
+  }
+
+  &--motor {
+    top: 16px;
+    left: 189px;
+  }
+}
+
+

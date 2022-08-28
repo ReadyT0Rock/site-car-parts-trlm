@@ -1,0 +1,182 @@
+.header {
+  min-height: 120px;
+  padding-top: 28px;
+  margin-bottom: 9px;
+
+  overflow-y: hidden;
+}
+
+.header__container {
+  width: @mobile-width;
+
+  margin: 0 auto;
+}
+
+.header-top {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.header-top__toggle {
+  width: 33.67px;
+  height: 27px;
+
+  padding: 0;
+  margin-right: 34px;
+
+  text-align: center;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.header-top__toggle-decorate {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-top: 3px;
+
+  background-color: #2f3035;
+  border-radius: 3px;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+
+    width: 33.67px;
+    height: 3px;
+
+    background-color: #2f3035;
+    border-radius: 3px;
+  }
+
+  &:before {
+    top: 12px;
+    left: 0;
+  }
+
+  &:after {
+    bottom: 12px;
+    left: 0;
+  }
+
+  &--close {
+    height: 0;
+
+    &:before {
+      top: 0;
+      left: 0;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      top: 0;
+      left: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.header-top__address {
+  display: none;
+}
+
+.header-top__user-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 101px;
+  min-height: 24px;
+}
+
+.header-top__user-link {
+  display: block;
+
+  &--favourite {
+    min-width: 25px;
+    min-height: 22px;
+  }
+
+  &--prifile {
+    min-width: 25px;
+    min-height: 24px;
+  }
+
+  &--cart {
+    position: relative;
+
+    min-width: 31px;
+    min-height: 23px;
+  }
+}
+
+.header-top__user-icon,
+.icon-favourite {
+  fill: @main-fill-color;
+
+  &:hover {
+
+    fill: @second-bg-color;
+  }
+}
+
+.header-top__user-amount {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+
+  display: block;
+  min-width: 20px;
+  min-height: 20px;
+  padding: 4px 7px;
+
+  font-size: 10px;
+  line-height: 12px;
+  color: #ffffff;
+
+  background-color: @second-bg-color;
+  border-radius: 50%;
+}
+
+.header-top__list {
+  display: flex;
+  min-width: 310px;
+  height: 53px;
+  margin-top: 24px;
+
+  font-weight: 700;
+
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.header-top__item:not(:last-child) {
+  margin-right: 22px;
+}
+
+.header-top__link {
+  color: @main-color-text;
+
+  white-space: nowrap;
+
+  &:hover {
+    color: @second-color-text;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
