@@ -1,0 +1,52 @@
+.breadcrumbs {
+  margin-bottom: 25px;
+}
+
+.breadcrumbs__container {
+  width: @mobile-width;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  width: 100%;
+  min-height: 18px;
+  margin-bottom: 56px;
+}
+
+.breadcrumbs__item {
+  position: relative;
+
+  margin-right: 26px;
+
+  &--icon {
+    &::after {
+      position: absolute;
+      content: "";
+      top: 10px;
+      right: -17px;
+
+      width: 6px;
+      height: 9px;
+
+      background: url("../../img/arrow.svg") no-repeat;
+      background-size: 6px 9px;
+    }
+  }
+}
+
+.breadcrumbs__link {
+  font-size: 15px;
+  line-height: 18px;
+  color: #c4c4c4;
+}
+
+.header-inner-title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}

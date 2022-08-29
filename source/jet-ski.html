@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header header--another-height">
     <div class="header__container">
       <div class="header-top">
         <!-- header__toggle--close - внешний вид кнопки при закрытом бургере, header__toggle--nojs - убирает кнопку бургера при открюченном js по умолчанию -->
@@ -55,17 +55,6 @@
               </svg>
               <span class="header-top__user-amount">1</span>
             </a>
-          </li>
-        </ul>
-        <ul class="header-top__list">
-          <li class="header-top__item">
-            <a class="header-top__link" href="#">Магазины</a>
-          </li>
-          <li class="header-top__item">
-            <a class="header-top__link" href="#">Акции</a>
-          </li>
-          <li class="header-top__item">
-            <a class="header-top__link" href="#">Доставка и оплата</a>
           </li>
         </ul>
       </div>
@@ -153,23 +142,41 @@
   </header>
 
   <main class="main">
-    <div class="container">
-      <div class="header-inner">
-        <ul class="breadcrumbs">
-          <li class="breadcrumbs__item">
+
+    <div class="breadcrumbs">
+      <div class="breadcrumbs__container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item breadcrumbs__item--icon">
             <a class="breadcrumbs__link" href="index.html">Главная</a>
           </li>
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link">Гидроциклы</a>
           </li>
         </ul>
-        <h1 class="header-inner__title">Гидроциклы</h1>
+        <h1 class="header-inner-title">Гидроциклы</h1>
       </div>
     </div>
 
     <section class="sorting">
       <h2 class="visually-hidden">Сортировка</h2>
-      <div class="container">
+      <div class="sorting__container">
+        <div class="sorting__wrapper-type">
+          <form class="sorting__form" action="#" method="post">
+            <select class="sorting__select" name="sorting" id="sorting">
+              <option value="popular">По популярности</option>
+              <option value="expensive">Сначала дороже</option>
+              <option value="cheaper">Сначала дешевле</option>
+            </select>
+            <div class="sorting__card-grid-toogle">
+              <button class="sorting__btn-toggle sorting__btn-toggle--table sorting__btn-toggle--current" type="button">
+                <span class="visually-hidden">Показать таблицей</span>
+              </button>
+              <button class="sorting__btn-toggle sorting__btn-toggle--list" type="button">
+                <span class="visually-hidden">Показать списком</span>
+              </button>
+            </div>
+          </form>
+        </div>
         <div class="sorting__wrapper">
           <ul class="sorting__list">
             <li class="sorting__item">
@@ -185,23 +192,6 @@
               <a class="sorting__link" href="#">еще</a>
             </li>
           </ul>
-        </div>
-        <div class="sorting__wrapper-type">
-          <form class="sorting__form" action="#" method="post">
-            <select name="sorting" id="sorting">
-              <option value="popular">По полулярности</option>
-              <option value="expensive">Сначала дороже</option>
-              <option value="cheaper">Сначала дешевле</option>
-            </select>
-            <div class="sorting__card-grid-toogle sorting__card-grid-toogle--current">
-              <button class="sorting__btn-toggle" type="button">
-                <span class="visually-hidden">Показать таблицей</span>
-              </button>
-              <button class="sorting__btn-toggle" type="button">
-                <span class="visually-hidden">Показать списком</span>
-              </button>
-            </div>
-          </form>
         </div>
       </div>
     </section>
@@ -418,7 +408,7 @@
                     <use href="img/sprite.svg#icon-favourite"></use>
                   </svg>
                 </button>
-                <img class="product__img" src="img/jet-ski/products/brp-seadoo-gti-130hp-se-long-black-mango.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
+                <img class="product__img product__img--jet-ski-position" src="img/jet-ski/products/brp-seadoo-gti-130hp-se-long-black-mango.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
                 <div class="product__wrapper">
                 <h3 class="product__name">Гидроцикл BRP SeaDoo GTI 130hp SE Black\Mango</h3>
                 <b class="product__price">1 049 500 ₽</b>
@@ -441,7 +431,7 @@
                     <use href="img/sprite.svg#icon-favourite"></use>
                   </svg>
                 </button>
-                <img class="product__img" src="img/jet-ski/products/brp-seadoo-gti-155hp-se-long-blue-metallic.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
+                <img class="product__img product__img--jet-ski-position" src="img/jet-ski/products/brp-seadoo-gti-155hp-se-long-blue-metallic.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
                 <div class="product__wrapper">
                 <h3 class="product__name">Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</h3>
                 <b class="product__price">1 100 475 ₽</b>
@@ -463,7 +453,7 @@
                     <use href="img/sprite.svg#icon-favourite"></use>
                   </svg>
                 </button>
-                <img class="product__img" src="img/jet-ski/products/brp-seadoo-gtr-230hp-x-california-green.jpg" width="250" height="190" alt="эхолокатор фирмы гармин с большим экраном, черного цвета">
+                <img class="product__img product__img--jet-ski-position" src="img/jet-ski/products/brp-seadoo-gtr-230hp-x-california-green.jpg" width="250" height="190" alt="эхолокатор фирмы гармин с большим экраном, черного цвета">
                 <div class="product__wrapper">
                 <h3 class="product__name">Гидроцикл BRP SeaDoo GTR 230hp X California green </h3>
                 <b class="product__price">1 323 700 ₽</b>
@@ -478,7 +468,7 @@
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
-            <li class="product__item product__item--not-available-padding">
+            <li class="product__item product__item--not-available-padding product__item--mobile-hidden">
                 <span class="product__sale">Sale</span>
                 <button class="product__btn-favourite">
                   <span class="visually-hidden">Добавить в избранное</span>
@@ -486,7 +476,7 @@
                     <use href="img/sprite.svg#icon-favourite"></use>
                   </svg>
                 </button>
-                <img class="product__img" src="img/jet-ski/products/brp-seadoo-gtr-230hp-std-black-gulfstream.jpg" width="250" height="190" alt="витьеватый ключ">
+                <img class="product__img product__img--jet-ski-position" src="img/jet-ski/products/brp-seadoo-gtr-230hp-std-black-gulfstream.jpg" width="250" height="190" alt="витьеватый ключ">
                 <div class="product__wrapper">
                 <h3 class="product__name">Гидроцикл BRP SeaDoo GTR 230hp STD Black / Gulfstream</h3>
                 <p class="product__not-available">нет в наличии</p>
@@ -496,14 +486,14 @@
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
-            <li class="product__item">
+            <li class="product__item product__item--mobile-hidden">
                 <button class="product__btn-favourite">
                   <span class="visually-hidden">Добавить в избранное</span>
                   <svg class="product__icon-favourite icon-favourite" width="26" height="22">
                     <use href="img/sprite.svg#icon-favourite"></use>
                   </svg>
                 </button>
-                <img class="product__img" src="img/jet-ski/products/brp-seadoo-gtx-300hp-ltd-liquid-metal.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
+                <img class="product__img product__img--jet-ski-position" src="img/jet-ski/products/brp-seadoo-gtx-300hp-ltd-liquid-metal.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
                 <div class="product__wrapper">
                 <h3 class="product__name">Гидроцикл BRP SeaDoo GTX 300hp LTD Liquid Metal</h3>
                 <b class="product__price">1 543 000 ₽</b>
@@ -518,14 +508,14 @@
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
-            <li class="product__item">
+            <li class="product__item product__item--mobile-hidden">
                 <button class="product__btn-favourite">
                   <span class="visually-hidden">Добавить в избранное</span>
                   <svg class="product__icon-favourite icon-favourite" width="26" height="22">
                     <use href="img/sprite.svg#icon-favourite"></use>
                   </svg>
                 </button>
-                <img class="product__img" src="img/jet-ski/products/brp-seadoo-spark-60hp-2up.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
+                <img class="product__img product__img--jet-ski-position" src="img/jet-ski/products/brp-seadoo-spark-60hp-2up.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
                 <div class="product__wrapper">
                 <h3 class="product__name">Гидроцикл BRP SeaDoo Spark 60hp 2 up</h3>
                 <b class="product__price">732 345 ₽</b>
@@ -540,14 +530,14 @@
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
-            <li class="product__item">
+            <li class="product__item product__item--mobile-hidden">
                 <button class="product__btn-favourite">
                   <span class="visually-hidden">Добавить в избранное</span>
                   <svg class="product__icon-favourite icon-favourite" width="26" height="22">
                     <use href="img/sprite.svg#icon-favourite"></use>
                   </svg>
                 </button>
-                <img class="product__img" src="img/jet-ski/products/brp-seadoo-spark-gts-90hp-rental.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
+                <img class="product__img product__img--jet-ski-position" src="img/jet-ski/products/brp-seadoo-spark-gts-90hp-rental.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
                 <div class="product__wrapper">
                 <h3 class="product__name">Гидроцикл BRP SeaDoo Spark GTS 90hp Rental</h3>
                 <b class="product__price">857 666 ₽</b>
@@ -562,7 +552,7 @@
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
-            <li class="product__item">
+            <li class="product__item product__item--mobile-hidden">
                 <span class="product__sale">Sale</span>
                 <button class="product__btn-favourite">
                   <span class="visually-hidden">Добавить в избранное</span>
@@ -570,7 +560,7 @@
                     <use href="img/sprite.svg#icon-favourite"></use>
                   </svg>
                 </button>
-                <img class="product__img" src="img/jet-ski/products/brp-seadoo-wake-230hp-pro-teal-bluel.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
+                <img class="product__img product__img--jet-ski-position" src="img/jet-ski/products/brp-seadoo-wake-230hp-pro-teal-bluel.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
                 <div class="product__wrapper">
                 <h3 class="product__name">Гидроцикл BRP SeaDoo WAKE 230hp PRO Teal blue</h3>
                 <b class="product__price">1 229 711 ₽</b>
@@ -585,14 +575,14 @@
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
-            <li class="product__item">
+            <li class="product__item product__item--mobile-hidden">
                 <button class="product__btn-favourite">
                   <span class="visually-hidden">Добавить в избранное</span>
                   <svg class="product__icon-favourite icon-favourite" width="26" height="22">
                     <use href="img/sprite.svg#icon-favourite"></use>
                   </svg>
                 </button>
-                <img class="product__img" src="img/jet-ski/products/spark2up-900-ho-ace-chili-pepper.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
+                <img class="product__img product__img--jet-ski-position" src="img/jet-ski/products/spark2up-900-ho-ace-chili-pepper.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
                 <div class="product__wrapper">
                 <h3 class="product__name">Гидроцикл Spark 2-UP 900 Ho Ace Chili Pepper</h3>
                 <b class="product__price">587 440 ₽</b>
@@ -607,15 +597,14 @@
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
-            <li class="product__item">
-
+            <li class="product__item product__item--mobile-hidden">
                 <button class="product__btn-favourite">
                   <span class="visually-hidden">Добавить в избранное</span>
                   <svg class="product__icon-favourite icon-favourite" width="26" height="22">
                     <use href="img/sprite.svg#icon-favourite"></use>
                   </svg>
                 </button>
-                <img class="product__img" src="img/jet-ski/products/spark2up-900-ho-ace-pineapple.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
+                <img class="product__img product__img--jet-ski-position" src="img/jet-ski/products/spark2up-900-ho-ace-pineapple.jpg" width="250" height="190" alt="аудио портативная система фирмы брп черного цвета">
                 <div class="product__wrapper">
                 <h3 class="product__name">Гидроцикл Spark 2-UP 900 Ho Ace Pineapple </h3>
                 <b class="product__price">587 440 ₽</b>
@@ -630,7 +619,7 @@
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
-            <li class="product__item">
+            <li class="product__item product__item--mobile-hidden">
                 <span class="product__sale">Sale</span>
                 <button class="product__btn-favourite">
                   <span class="visually-hidden">Добавить в избранное</span>
@@ -638,7 +627,7 @@
                     <use href="img/sprite.svg#icon-favourite"></use>
                   </svg>
                 </button>
-                <img class="product__img" src="img/jet-ski/products/brp-seadoo-spark2up-900-ace-vanilla.jpg" width="250" height="190" alt="витьеватый ключ">
+                <img class="product__img product__img--jet-ski-position" src="img/jet-ski/products/brp-seadoo-spark2up-900-ace-vanilla.jpg" width="250" height="190" alt="витьеватый ключ">
                 <div class="product__wrapper">
                 <h3 class="product__name">Гидроцикл BRP Sea-doo Spark 2-UP 900 Ace Vanilla </h3>
                 <p class="product__not-available">нет в наличии</p>
@@ -648,7 +637,7 @@
                   <span class="product__view-text">Посмотреть товар</span>
                 </a>
             </li>
-            <li class="product__item product__item--not-available-padding">
+            <li class="product__item product__item--not-available-padding product__item--mobile-hidden">
                 <span class="product__sale">Sale</span>
                 <button class="product__btn-favourite">
                   <span class="visually-hidden">Добавить в избранное</span>
@@ -656,7 +645,7 @@
                     <use href="img/sprite.svg#icon-favourite"></use>
                   </svg>
                 </button>
-                <img class="product__img" src="img/jet-ski/products/spark3up-900-ho-ace-ibr-blueberry.jpg" width="250" height="190" alt="витьеватый ключ">
+                <img class="product__img product__img--jet-ski-position" src="img/jet-ski/products/spark3up-900-ho-ace-ibr-blueberry.jpg" width="250" height="190" alt="витьеватый ключ">
                 <div class="product__wrapper">
                 <h3 class="product__name">Гидроцикл Spark 3-UP 900 HO Ace IBR Blueberry</h3>
                 <p class="product__not-available">нет в наличии</p>
@@ -665,14 +654,13 @@
                 <a class="product__view-link" href="#">
                   <span class="product__view-text">Посмотреть товар</span>
                 </a>
-
             </li>
           </ul>
           <a class="btn-show-more products__btn-show-more" href="#">Показать ещё</a>
           <div class="pagination">
             <ul class="pagination__list">
-              <li class="pagination__item">
-                <a class="pagination__link" href="#">1</a>
+              <li class="pagination__item pagination__item--current">
+                <a class="pagination__link pagination__link--current" href="#">1</a>
               </li>
               <li class="pagination__item">
                 <a class="pagination__link" href="#">2</a>
@@ -699,8 +687,8 @@
     </div>
 
     <section class="recommended-products">
-      <div class="container">
-        <h2 class="recommended-products__title">С этим товаром покупают</h2>
+      <h2 class="recommended-products__title product-title">С этим товаром покупают</h2>
+      <div class="recommended__container product-container">
         <ul class="product-type">
           <li class="product-type__item product-type__item--current">
             <a class="product-type__link product-type__link--current" href="#">запчасти</a>
@@ -721,7 +709,8 @@
             <a class="product-type__link" href="#">аксессуары</a>
           </li>
         </ul>
-        <div class="recommended-products__wrapper">
+      </div>
+        <div class="recommended-products__container product-container">
           <ul class="product recommended-products__list">
             <li class="product__item product__item--not-available-padding">
                 <span class="product__sale">Sale</span>
@@ -736,7 +725,7 @@
                 <h3 class="product__name">BRP Audio-портативная система</h3>
                 <p class="product__not-available">нет в наличии</p>
                 <a class="product__inform" href="#">Сообщить о поступлении</a>
-                </div>
+              </div>
               <a class="product__view-link" href="#">
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
@@ -749,8 +738,10 @@
                   </svg>
                 </button>
                 <img class="product__img" src="img/index/recommended-products/Echomap.jpg" width="200" height="142" alt="эхолокатор фирмы гармин с большим экраном, черного цвета">
+                <div class="product__wrapper">
                 <h3 class="product__name">Garmin Echomap Plus 62cv</h3>
                 <b class="product__price">45 800 ₽</b>
+              </div>
               <button class="product__add-cart" type="button">
                 <span class="visually-hidden">Добавить в корзину</span>
                 <svg class="product__icon-cart" width="31" height="23">
@@ -770,9 +761,11 @@
                   </svg>
                 </button>
                 <img class="product__img" src="img/index/recommended-products/key.jpg" width="180" height="180" alt="ключ со спиральным кабелем">
+                <div class="product__wrapper">
                 <h3 class="product__name">RF D.E.S.S.TM Key</h3>
                 <p class="product__not-available">нет в наличии</p>
                 <a class="product__inform" href="#">Сообщить о поступлении</a>
+              </div>
               <a class="product__view-link" href="#">product
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
@@ -785,8 +778,10 @@
                   </svg>
                 </button>
                 <img class="product__img" src="img/index/recommended-products/suit.jpg" width="200" height="200" alt="мужской плавательный костюм черного цвета с красными вставками">
+                <div class="product__wrapper">
                 <h3 class="product__name">Мужской костюм 3мм</h3>
                 <b class="product__price">7 000 ₽</b>
+              </div>
               <button class="product__add-cart" type="button">
                 <span class="visually-hidden">Добавить в корзину</span>
                 <svg class="product__icon-cart" width="31" height="23">
@@ -806,14 +801,13 @@
               <span class="visually-hidden">листать дальше</span>
             </button>
           </div>
-          <div class="slider-toggles">
+          <div class="slider-toggles slider-toggles--2">
             <button class="slider-toggles__toggle slider-toggles__toggle--current" type="button">1</button>
             <button class="slider-toggles__toggle" type="button">2</button>
             <button class="slider-toggles__toggle" type="button">3</button>
           </div>
           <a class="btn-show-more recommended-products__btn-show-more" href="#">Показать ещё</a>
         </div>
-      </div>
     </section>
   </main>
 
