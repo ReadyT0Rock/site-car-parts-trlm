@@ -63,6 +63,8 @@
 }
 
 .footer__text {
+  position: relative;
+
   width: 100%;
   min-height: 50px;
   padding: 0 6px;
@@ -80,8 +82,18 @@
   cursor: pointer;
 }
 
+.footer__icon-arrow {
+  position: absolute;
+  top: 21px;
+  right: 6px;
+
+  transform: rotate(90deg);
+}
+
 .footer__list {
   display: none;
+
+  padding: 0 10px;
 
   &--information-closed {
     display: none;
@@ -102,6 +114,12 @@
   &--nojs {
     display: block;
   }
+}
+
+.footer__link {
+  font-size: 14px;
+  line-height: 17px;
+  color: @main-color-text;
 }
 
 .footer__bottom {
