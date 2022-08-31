@@ -10,9 +10,14 @@
 
 .breadcrumbs__list {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   min-height: 18px;
   margin-bottom: 56px;
+
+  &--another-margin {
+    margin-bottom: 36px;
+  }
 }
 
 .breadcrumbs__item {
@@ -40,6 +45,9 @@
   font-size: 15px;
   line-height: 18px;
   color: #c4c4c4;
+
+  // TODO: УДАЛИТЬ
+  white-space: nowrap;
 }
 
 .header-inner-title {

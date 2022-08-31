@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header header--another-height">
     <div class="header__container">
       <div class="header-top">
         <!-- header__toggle--close - внешний вид кнопки при закрытом бургере, header__toggle--nojs - убирает кнопку бургера при открюченном js по умолчанию -->
@@ -34,7 +34,7 @@
           <li class="header-top__user-item">
             <a class="header-top__user-link header-top__user-link--favourite" href="#">
               <span class="visually-hidden">избранное</span>
-              <svg width="26" height="22">
+              <svg class="header-top__user-icon" width="26" height="22">
                 <use href="img/sprite.svg#icon-favourite"></use>
               </svg>
             </a>
@@ -42,7 +42,7 @@
           <li class="header-top__user-item">
             <a class="header-top__user-link header-top__user-link--profile" href="#">
               <span class="visually-hidden">профиль</span>
-              <svg width="25" height="24">
+              <svg class="header-top__user-icon" width="25" height="24">
                 <use href="img/sprite.svg#icon-profile"></use>
               </svg>
             </a>
@@ -50,7 +50,7 @@
           <li class="header-top__user-item">
             <a class="header-top__user-link header-top__user-link--cart" href="#">
               <span class="visually-hidden">корзина</span>
-              <svg width="31" height="23">
+              <svg class="header-top__user-icon" width="31" height="23">
                 <use href="img/sprite.svg#icon-cart"></use>
               </svg>
               <span class="header-top__user-amount">1</span>
@@ -116,7 +116,7 @@
         <li class="navigation__item">
           <a class="navigation__link" href="#">Катера</a>
         </li>
-        <li class="navigation__item">
+        <li class="navigation__item navigation__item--current">
           <a class="navigation__link" href="jet-ski.html">Гидроциклы</a>
         </li>
         <li class="navigation__item">
@@ -145,7 +145,7 @@
 
     <div class="breadcrumbs">
       <div class="breadcrumbs__container">
-        <ul class="breadcrumbs__list">
+        <ul class="breadcrumbs__list breadcrumbs__list--another-margin">
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link breadcrumbs__item--icon" href="index.html">Главная</a>
           </li>
@@ -160,30 +160,58 @@
     </div>
 
     <section class="product-card">
-      <div class="container">
+      <div class="product-card__container">
         <div class="product-card__wrapper">
           <div class="column-left">
             <span class="product-card__sale">Sale</span>
-            <img class="product-card__img" src="img/jet-ski-brp-seadoo-gti-155hp-se-long-blue-matallic/brp-seadoo-gti-155hp-se-long-blue-metallic.jpg" width="500" height="375" alt="гидроцикл темно-бирюзового цвета">
+            <img class="product-card__img" src="img/jet-ski-brp-seadoo-gti-155hp-se-long-blue-matallic/brp-seadoo-gti-155hp-se-long-blue-metallic.jpg" width="250" height="188" alt="гидроцикл темно-бирюзового цвета">
+            <div class="product-card__price-wrapper">
             <b class="product-card__price-prev">1 200 475 ₽</b>
             <b class="product-card__price-new">1 100 475 ₽</b>
             <a class="product-card__link-cheaper" href="#">Нашли дешевле? Снизим цену!</a>
           </div>
+          </div>
           <div class="column-right">
             <h1 class="product-card__title">Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</h1>
             <span class="product-card__code">Код товара: 366666-2</span>
-            <button class="product-card__favourite" type="button">
+            <button class="product-card__btn product-card__btn--favourite product-card__favourite" type="button">
               <span class="visually-hidden">Добавить в избранное</span>
+              <svg class="header-top__user-icon icon-favourite" width="26" height="22">
+                <use href="img/sprite.svg#icon-favourite"></use>
+              </svg>
             </button>
-            <button class="product-card__compare" type="button">
+            <button class="product-card__btn product-card__btn--compare" type="button">
               <span class="visually-hidden">Добавить в сравнение</span>
+              <svg class="product-card__icon-histogram icon-favourite" width="20" height="27">
+                <use href="img/sprite.svg#icon-histogram"></use>
+              </svg>
             </button>
             <ul class="rating-star">
-              <li class="rating-star__item rating-star__item--active">S</li>
-              <li class="rating-star__item rating-star__item--active">S</li>
-              <li class="rating-star__item rating-star__item--active">S</li>
-              <li class="rating-star__item rating-star__item--active">S</li>
-              <li class="rating-star__item">S</li>
+              <li class="rating-star__item">
+                <svg class="rating-star__icon rating-star__icon--active" width="20" height="27">
+                  <use href="img/sprite.svg#icon-star"></use>
+                </svg>
+              </li>
+              <li class="rating-star__item">
+                <svg class="rating-star__icon rating-star__icon--active" width="20" height="27">
+                  <use href="img/sprite.svg#icon-star"></use>
+                </svg>
+              </li>
+              <li class="rating-star__item">
+                <svg class="rating-star__icon rating-star__icon--active" width="20" height="27">
+                  <use href="img/sprite.svg#icon-star"></use>
+                </svg>
+              </li>
+              <li class="rating-star__item">
+                <svg class="rating-star__icon rating-star__icon--active" width="20" height="27">
+                  <use href="img/sprite.svg#icon-star"></use>
+                </svg>
+              </li>
+              <li class="rating-star__item">
+                <svg class="rating-star__icon" width="20" height="27">
+                  <use href="img/sprite.svg#icon-star"></use>
+                </svg>
+              </li>
             </ul>
             <div class="product-card__btn-wrapper">
               <button class="product-card__btn product-card__btn--current" type="button">Характеристики</button>
@@ -214,13 +242,13 @@
                 <a class="product-card__link-show-all-characteristics" href="#characteristics">Показать еще</a>
               </li>
             </ul>
-            <a class="product-card__btn-buy" href="#">Купить</a>
           </div>
+          <a class="product-card__btn-buy product-card__btn-buy--mobile-order" href="#">Купить</a>
         </div>
       </div>
-      <div class="container">
+      <div class="product-card__container">
         <div class="product-card-navigation">
-          <ul class="product-card-navigation__link">
+          <ul class="product-card-navigation__list">
             <li class="product-card-navigation__item">
               <a class="product-card-navigation__link" href="#">О товаре</a>
             </li>
@@ -231,7 +259,7 @@
               <a class="product-card-navigation__link" href="#">Отзывы</a>
             </li>
             <li class="product-card-navigation__item product-card-navigation__item--current">
-              <a class="product-card-navigation__link" href="#" id="self-delivery">Самовывоз</a>
+              <a class="product-card-navigation__link product-card-navigation__link--current" href="#" id="self-delivery">Самовывоз</a>
             </li>
             <li class="product-card-navigation__item">
               <a class="product-card-navigation__link" href="#">Доставка</a>
@@ -245,29 +273,31 @@
           </ul>
           <div class="self-delivery">
             <form class="self-delivery__form" action="#" method="get">
-              <label class="self-delivery__label" for="search-store">Магазин</label>
-              <input class="self-delivery__input-search" type="text" name="search-store" id="search-store">
-              <label for="today">Забрать сегодня</label>
-              <input class="self-delivery__checkbox" type="checkbox" name="today" id="today">
-              <label for="week">Забрать в течение недели</label>
-              <input class="self-delivery__checkbox" type="checkbox" name="week" id="week">
+              <label class="self-delivery__label self-delivery__label--search" for="search-store">Магазин</label>
+              <input class="self-delivery__input-search" type="text" name="search-store" id="search-store" placeholder="Введите название магазина">
+              <p class="self-delivery__inner-wrapper">
+                <label class="self-delivery__label" for="today">Забрать сегодня</label>
+                <input class="self-delivery__checkbox" type="checkbox" name="today" id="today">
+              </p>
+              <p class="self-delivery__inner-wrapper">
+                <label class="self-delivery__label" for="week">Забрать в течение недели</label>
+                <input class="self-delivery__checkbox" type="checkbox" name="week" id="week">
+              </p>
             </form>
             <ul class="self-delivery__list">
-              <li class="self-delivery__item">
+              <li class="self-delivery__item self-delivery__item--open-always">
                 <ul class="self-delivery__sublist">
-                  <li class="self-delivery__header">Адрес</li>
-                  <li class="self-delivery__header">Режим работы</li>
-                  <li class="self-delivery__header">Доступно</li>
-                  <li class="self-delivery__header">Количество</li>
-                  <li class="self-delivery__header">
-                    <a class="self-delivery__btn-buy product-card__btn-buy" href="#"></a>
-                  </li>
+                  <li class="self-delivery__header self-delivery__header--address">Адрес</li>
+                  <li class="self-delivery__header self-delivery__header--working">Режим работы</li>
+                  <li class="self-delivery__header self-delivery__header--available">Доступно</li>
+                  <li class="self-delivery__header self-delivery__header--amount">Количество</li>
+                  <li class="self-delivery__header self-delivery__header--empty"></li>
                 </ul>
               </li>
-              <li class="self-delivery__item">
+              <li class="self-delivery__item self-delivery__item--opened">
                 <ul class="self-delivery__sublist">
-                  <li class="self-delivery__subitem">Москва, ул. Науки 25</li>
-                  <li class="self-delivery__subitem">
+                  <li class="self-delivery__subitem self-delivery__subitem--address">Москва, ул. Науки 25</li>
+                  <li class="self-delivery__subitem self-delivery__subitem--mode">
                     <span class="self-delivery__mode">пн-сб:</span>
                     <span class="self-delivery__mode">08:00-19:00</span>
                     <span class="self-delivery__mode">вс:</span>
@@ -282,8 +312,8 @@
               </li>
               <li class="self-delivery__item">
                 <ul class="self-delivery__sublist">
-                  <li class="self-delivery__subitem">Москва, ул.  Южная 134</li>
-                  <li class="self-delivery__subitem">
+                  <li class="self-delivery__subitem self-delivery__subitem--address">Москва, ул.  Южная 134</li>
+                  <li class="self-delivery__subitem self-delivery__subitem--mode">
                     <span class="self-delivery__mode">пн-сб:</span>
                     <span class="self-delivery__mode">08:00-19:00</span>
                     <span class="self-delivery__mode">вс:</span>
@@ -297,14 +327,14 @@
               </li>
               <li class="self-delivery__item">
                 <ul class="self-delivery__sublist">
-                  <li class="self-delivery__subitem">Санкт-Петербург, ул. Красная 19</li>
-                  <li class="self-delivery__subitem">
+                  <li class="self-delivery__subitem self-delivery__subitem--address">Санкт-Петербург, ул. Красная 19</li>
+                  <li class="self-delivery__subitem self-delivery__subitem--mode">
                     <span class="self-delivery__mode">пн-сб:</span>
                     <span class="self-delivery__mode">08:00-19:00</span>
                     <span class="self-delivery__mode">вс:</span>
                     <span class="self-delivery__mode">09:00-17:00</span>
                   </li>
-                  <li class="self-delivery__subitem self-delivery__subitem--not-available">Нет в наличии</li>
+                  <li class="self-delivery__subitem self-delivery__subitem--in-stock self-delivery__subitem--not-available">Нет в наличии</li>
                   <li class="self-delivery__subitem self-delivery__subitem--amount">0</li>
                   <li class="self-delivery__subitem">
                     <a class="self-delivery__btn-buy product-card__btn-buy" href="#">Купить</a>
@@ -313,14 +343,14 @@
               </li>
               <li class="self-delivery__item">
                 <ul class="self-delivery__sublist">
-                  <li class="self-delivery__subitem">Киев, ул Шевченко 167</li>
-                  <li class="self-delivery__subitem">
+                  <li class="self-delivery__subitem self-delivery__subitem--address">Киев, ул Шевченко 167</li>
+                  <li class="self-delivery__subitem self-delivery__subitem--mode">
                     <span class="self-delivery__mode">пн-сб:</span>
                     <span class="self-delivery__mode">08:00-19:00</span>
                     <span class="self-delivery__mode">вс:</span>
                     <span class="self-delivery__mode">09:00-17:00</span>
                   </li>
-                  <li class="self-delivery__subitem self-delivery__subitem--not-available">Нет в наличии</li>
+                  <li class="self-delivery__subitem self-delivery__subitem--in-stock self-delivery__subitem--not-available">Нет в наличии</li>
                   <li class="self-delivery__subitem self-delivery__subitem--amount">0</li>
                   <li class="self-delivery__subitem">
                     <a class="self-delivery__btn-buy product-card__btn-buy" href="#">Купить</a>
@@ -335,11 +365,11 @@
     </section>
 
     <section class="recommended-products">
-      <div class="container">
-        <h2 class="recommended-products__title">С этим товаром покупают</h2>
+      <h2 class="recommended-products__title product-title">С этим товаром покупают</h2>
+      <div class="recommended__container product-container">
         <ul class="product-type">
-          <li class="product-type__item">
-            <a class="product-type__link" href="#">запчасти</a>
+          <li class="product-type__item product-type__item--current">
+            <a class="product-type__link product-type__link--current" href="#">запчасти</a>
           </li>
           <li class="product-type__item">
             <a class="product-type__link" href="#">моторы</a>
@@ -347,7 +377,7 @@
           <li class="product-type__item">
             <a class="product-type__link" href="#">шины</a>
           </li>
-          <li class="product-type__item product-type__item--current">
+          <li class="product-type__item">
             <a class="product-type__link" href="#">электроника</a>
           </li>
           <li class="product-type__item">
@@ -357,15 +387,19 @@
             <a class="product-type__link" href="#">аксессуары</a>
           </li>
         </ul>
-        <div class="recommended-products__wrapper">
+      </div>
+        <div class="recommended-products__container product-container">
           <ul class="product recommended-products__list">
-            <li class="product__item">
-              <div class="product__wrapper">
+            <li class="product__item product__item--not-available-padding">
                 <span class="product__sale">Sale</span>
-                <button class="product__btn-favourite">
+                <button class="product__btn-favourite" type="button">
                   <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
                 </button>
                 <img class="product__img" src="img/index/recommended-products/portable-audio-system.jpg" width="200" height="133" alt="аудио портативная система фирмы брп черного цвета">
+                <div class="product__wrapper">
                 <h3 class="product__name">BRP Audio-портативная система</h3>
                 <p class="product__not-available">нет в наличии</p>
                 <a class="product__inform" href="#">Сообщить о поступлении</a>
@@ -374,70 +408,84 @@
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
-            <li class="product__item">
-              <div class="product__wrapper">
-                <button class="product__btn-favourite">
+            <li class="product__item product__item--mobile-hidden">
+                <button class="product__btn-favourite" type="button">
                   <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
                 </button>
                 <img class="product__img" src="img/index/recommended-products/Echomap.jpg" width="200" height="142" alt="эхолокатор фирмы гармин с большим экраном, черного цвета">
+                <div class="product__wrapper">
                 <h3 class="product__name">Garmin Echomap Plus 62cv</h3>
                 <b class="product__price">45 800 ₽</b>
               </div>
-              <button class="product__add-cart">
+              <button class="product__add-cart" type="button">
                 <span class="visually-hidden">Добавить в корзину</span>
+                <svg class="product__icon-cart" width="31" height="23">
+                  <use href="img/sprite.svg#icon-cart"></use>
+                </svg>
               </button>
               <a class="product__view-link" href="#">
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
-            <li class="product__item">
-              <div class="product__wrapper">
+            <li class="product__item product__item--mobile-hidden product__item--not-available-padding">
                 <span class="product__sale">Sale</span>
-                <button class="product__btn-favourite product__btn-favourite--added">
+                <button class="product__btn-favourite product__btn-favourite--added" type="button">
                   <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
                 </button>
-                <img class="product__img" src="img/index/recommended-products/key.jpg" width="180" height="180" alt="витьеватый ключ">
+                <img class="product__img" src="img/index/recommended-products/key.jpg" width="180" height="180" alt="ключ со спиральным кабелем">
+                <div class="product__wrapper">
                 <h3 class="product__name">RF D.E.S.S.TM Key</h3>
                 <p class="product__not-available">нет в наличии</p>
                 <a class="product__inform" href="#">Сообщить о поступлении</a>
               </div>
-              <a class="product__view-link" href="#">
+              <a class="product__view-link" href="#">product
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
-            <li class="product__item">
-              <div class="product__wrapper">
-                <button class="product__btn-favourite">
+            <li class="product__item product__item--mobile-hidden">
+                <button class="product__btn-favourite" type="button">
                   <span class="visually-hidden">Добавить в избранное</span>
+                  <svg class="product__icon-favourite icon-favourite" width="26" height="22">
+                    <use href="img/sprite.svg#icon-favourite"></use>
+                  </svg>
                 </button>
                 <img class="product__img" src="img/index/recommended-products/suit.jpg" width="200" height="200" alt="мужской плавательный костюм черного цвета с красными вставками">
+                <div class="product__wrapper">
                 <h3 class="product__name">Мужской костюм 3мм</h3>
                 <b class="product__price">7 000 ₽</b>
               </div>
-              <button class="product__add-cart">
+              <button class="product__add-cart" type="button">
                 <span class="visually-hidden">Добавить в корзину</span>
+                <svg class="product__icon-cart" width="31" height="23">
+                  <use href="img/sprite.svg#icon-cart"></use>
+                </svg>
               </button>
               <a class="product__view-link" href="#">
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
           </ul>
-          <div class="product-control-wrapper">
-            <button class="product-control-wrapper product-control-wrapper--prev">
+          <div class="product-control">
+            <button class="product-control__btn product-control__btn--prev" type="button">
               <span class="visually-hidden">листать назад</span>
             </button>
-            <button class="product-control-wrapper product-control-wrapper--next">
+            <button class="product-control__btn product-control__btn--next" type="button">
               <span class="visually-hidden">листать дальше</span>
             </button>
           </div>
-          <div class="slider-toggles">
+          <div class="slider-toggles slider-toggles--2">
             <button class="slider-toggles__toggle slider-toggles__toggle--current" type="button">1</button>
             <button class="slider-toggles__toggle" type="button">2</button>
             <button class="slider-toggles__toggle" type="button">3</button>
           </div>
           <a class="btn-show-more recommended-products__btn-show-more" href="#">Показать ещё</a>
         </div>
-      </div>
     </section>
 
   </main>
