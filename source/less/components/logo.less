@@ -1,3 +1,16 @@
 .logo {
+  order: 1;
   margin-right: 35px;
+}
+
+@media (min-width: @desktop-width) {
+  .logo {
+    margin-right: 128px;
+    order: 2;
+  }
+
+  .logo__img {
+    width: 80px;
+    height: 76px;
+  }
 }

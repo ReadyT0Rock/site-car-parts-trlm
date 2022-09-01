@@ -23,12 +23,14 @@
         </button>
         <a class="logo" href="index.html">
           <picture>
-            <source media="(min-width: 1440)" srcset="img/logo-icon-desktop.svg" width="80" height="76">
+            <source media="(min-width: 1440px)" srcset="img/logo-icon-desktop.svg">
             <img class="logo__img" src="img/logo-icon-mobile.svg" width="82" height="25" alt="логотип магазина Драйв мото">
           </picture>
         </a>
         <address class="header-top__address">
-          <a class="header-top__address-link" href="#">Москва, ул.Науки 25</a>
+          <a class="header-top__address-link" href="#">
+            <pre>Москва,  ул. Науки  25</pre>
+          </a>
         </address>
         <ul class="header-top__user-list">
           <li class="header-top__user-item">
@@ -55,6 +57,17 @@
               </svg>
               <span class="header-top__user-amount">1</span>
             </a>
+          </li>
+        </ul>
+        <ul class="header-top__list header-top__list--mobile-hidden">
+          <li class="header-top__item">
+            <a class="header-top__link" href="#">Магазины</a>
+          </li>
+          <li class="header-top__item">
+            <a class="header-top__link" href="#">Акции</a>
+          </li>
+          <li class="header-top__item">
+            <a class="header-top__link" href="#">Доставка и оплата</a>
           </li>
         </ul>
       </div>
@@ -116,7 +129,7 @@
         <li class="navigation__item">
           <a class="navigation__link" href="#">Катера</a>
         </li>
-        <li class="navigation__item navigation__item--current">
+        <li class="navigation__item">
           <a class="navigation__link" href="jet-ski.html">Гидроциклы</a>
         </li>
         <li class="navigation__item">
@@ -498,7 +511,7 @@
           <p class="subscribe__text">Подпишитесь на нашу рассылку и узнавайте о акция быстрее</p>
           <form class="subscribe__form" action="#" method="post">
             <label class="visually-hidden" for="e-mail"></label>
-            <input class="subscribe__field" type="text" name="e-mail" id="e-mail" placeholder="Введите ваш e-mail:">
+            <input class="subscribe__field" type="text" name="e-mail" id="e-mail" required placeholder="Введите ваш e-mail:">
             <button class="subscribe__btn" type="submit">Отправить</button>
           </form>
         </div>
@@ -576,8 +589,8 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <a href="" class="footer__link-bottom">Договор оферты</a>
-        <a href="" class="footer__link-bottom">Политика обработки персональных данных</a>
+        <a class="footer__link-bottom" href="#" >Договор оферты</a>
+        <a class="footer__link-bottom" href="#" >Политика обработки персональных данных</a>
       </div>
     </div>
 

@@ -3,8 +3,6 @@
   padding-top: 28px;
   margin-bottom: 9px;
 
-  overflow-y: hidden;
-
   &--another-height {
     min-height: 86px
   }
@@ -101,6 +99,7 @@
   flex-wrap: wrap;
   width: 101px;
   min-height: 24px;
+  order: 2;
 }
 
 .header-top__user-link {
@@ -154,9 +153,10 @@
 
 .header-top__list {
   display: flex;
-  min-width: 310px;
-  height: 53px;
+  width: 310px;
+  min-height: 53px;
   margin-top: 24px;
+  order: 3;
 
   font-weight: 700;
 
@@ -164,6 +164,10 @@
 
   &::-webkit-scrollbar {
     width: 0;
+  }
+
+  &--mobile-hidden {
+    display: none;
   }
 }
 
@@ -182,5 +186,82 @@
 
   &:active {
     opacity: 0.5;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    min-height: 153px;
+    padding-top: 25px;
+    margin-bottom: 76px;
+
+    &--another-height {
+      min-height: 153px
+    }
+  }
+
+  .header__container {
+    width: @desktop-width;
+    padding: 0 135px;
+    margin: 0 auto;
+  }
+
+  .header-top {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .header-top__toggle {
+      display: none;
+  }
+
+  .header-top__address {
+    position: relative;
+
+    display: block;
+    order: 3;
+    margin-top: 29px;
+
+    font-style: normal;
+    font-weight: 700;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -11px;
+      left: -30px;
+
+      width: 30px;
+      height: 30px;
+
+      background: url(../../img/pin-address.svg) no-repeat;
+    }
+  }
+
+  .header-top__address-link > pre {
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .header-top__user-list {
+    order: 3;
+    margin-left: 86px;
+    margin-top: 29px;
+  }
+
+  .header-top__list {
+    justify-content: space-between;
+    order: 1;
+    width: 449px;
+    margin-right: 96px;
+    margin-top: 28px;
+
+    overflow-x: auto;
+
+    &--mobile-hidden {
+      display: flex;
+    }
   }
 }

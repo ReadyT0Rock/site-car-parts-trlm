@@ -109,4 +109,65 @@
     border: none;
     border-radius: 3px;
   }
+
+  .search__container {
+    width: @desktop-width;
+
+    padding: 0 135px;
+    margin-bottom: 80px;
+  }
+
+  .search__list {
+    display: flex;
+    width: 100%;
+    margin-bottom: 23px;
+
+    overflow-x: auto;
+  }
+
+  .search__item {
+    min-height: 47px;
+    padding: 11px 22px 12px;
+    margin-right: 13px;
+
+    &--current {
+      background-color: #f0f0f4;
+      border-radius: 3px;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .search__button--current {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0;
+  }
+
+  .search__field {
+    flex-grow: 1;
+    width: auto;
+    padding: 15px 20px;
+
+    background-color: #f0f0f4;
+    border-radius: 3px;
+  }
+
+  .search__field-btn {
+    width: 145px;
+    min-height: 50px;
+
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    background: none;
+    background-color: @second-bg-color;
+    border-radius: 3px;
+  }
 }
