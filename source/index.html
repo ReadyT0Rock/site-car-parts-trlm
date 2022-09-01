@@ -23,12 +23,14 @@
         </button>
         <a class="logo">
           <picture>
-            <source media="(min-width: 1440)" srcset="img/logo-icon-desktop.svg" width="80" height="76">
+            <source media="(min-width: 1440px)" srcset="img/logo-icon-desktop.svg">
             <img class="logo__img" src="img/logo-icon-mobile.svg" width="82" height="25" alt="логотип магазина Драйв мото">
           </picture>
         </a>
         <address class="header-top__address">
-          <a class="header-top__address-link" href="#">Москва, ул.Науки 25</a>
+          <a class="header-top__address-link" href="#">
+            <pre>Москва,  ул. Науки  25</pre>
+          </a>
         </address>
         <ul class="header-top__user-list">
           <li class="header-top__user-item">
@@ -161,15 +163,24 @@
           <ul class="slider__list">
             <li class="slider__item">
               <!-- нет возможности разделить элементы, картинка в макете вместе с надписью   -->
-              <img class="slider__img" width="320" height="164" src="img/index/mobile/promo/slider-1.jpg" alt="мужчина в очках и спасательном жилете катается на гидроцикле">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/index/deskstop/promo/slider-desktop-1.jpg 1x, img/index/deskstop/promo/slider-desktop-1@2x.jpg 2x">
+                <img class="slider__img" src="img/index/mobile/promo/slider-1.jpg" srcset="img/index/deskstop/promo/slider-1@2x.jpg 2x" width="320" height="164" alt="мужчина в очках и спасательном жилете катается на гидроцикле">
+              </picture>
             </li>
           </ul>
-          <div class="slider__control">
-            <button class="slider__button slider__button--prev" type="button">
+          <div class="slider__control slider-control">
+            <button class="slider__button slider__button--prev slider-button slider-button-prev" type="button">
               <span class="visually-hidden">Предыдущий слайд</span>
+              <svg class="slider__icon slider__icon--prev slider-icon" width="16" height="29">
+                <use href="img/sprite.svg#icon-slider-arrow"></use>
+              </svg>
             </button>
-            <button class="slider__button slider__button--next" type="button">
+            <button class="slider__button slider__button--next slider-button slider-button-next" type="button">
               <span class="visually-hidden">Следующий слайд</span>
+              <svg class="slider__icon slider__icon--next slider-icon slider-icon-next" width="16" height="29">
+                <use href="img/sprite.svg#icon-slider-arrow"></use>
+              </svg>
             </button>
           </div>
           <div class="slider__toggles">
@@ -219,8 +230,10 @@
           <img class="stock__img" width="125" height="177" src="img/index/promo/stock.jpg" alt="мотор для лодки фирмы сузуки черного цвета">
           <h3 class="stock__product-name">Лодочный мотор Suzuki DF9.9BRS</h3>
         </a>
+        <div class="stock__inner-wrapper">
           <strong class="stock__text">Акция действует до</strong>
           <span class="stock__data">31.08.2020</span>
+        </div>
         </article>
       </div>
     </section>
@@ -230,17 +243,17 @@
       <h2 class="visually-hidden">Поиск товара</h2>
         <form class="search__form" action="#" method="get">
           <ul class="search__list">
-            <li class="search__item search__item--current">
-              <button class="search__button search__button--current" type="button">Поиск по номеру</button>
-            </li>
             <li class="search__item">
-              <button class="search__button" type="button">Поиск по марке</button>
+              <button class="search__button" type="button">Поиск по номеру</button>
+            </li>
+            <li class="search__item search__item--current">
+              <button class="search__button search__button--current" type="button">Поиск по марке</button>
             </li>
             <li class="search__item">
               <button class="search__button" type="button">Поиск по названию товара</button>
             </li>
           </ul>
-          <div class="search__wrapper">
+          <div class="search__button--current">
             <label class="visually-hidden" for="search">поле поиска</label>
             <input class="search__field" type="search" id="search" name="search" placeholder="Введите марку" required>
             <button class="search__field-btn" type="submit">Искать</button>
@@ -264,7 +277,10 @@
                 </svg>
               </a>
             </div>
-            <img class="technics__img technics__img--quad-bike" src="img/index/mobile/technics/quad-bike.png" width="90" height="69" alt="квадроцикл синего цвета">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/index/deskstop/technics/quad-bike.png 1x, img/index/deskstop/technics/quad-bike@2x.png 2x">
+              <img class="technics__img technics__img--quad-bike" src="img/index/mobile/technics/quad-bike.png" srcset="img/index/mobile/technics/quad-bike@2x.png 2x" width="90" height="69" alt="квадроцикл синего цвета">
+            </picture>
           </li>
           <li class="technics__item">
             <div class="technics__wrapper">
@@ -277,7 +293,10 @@
                 </svg>
               </a>
             </div>
-            <img class="technics__img technics__img--jet-ski" src="img/index/mobile/technics/jet-ski.png" width="121" height="65" alt="гидроцикл цинего-белого цвета">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/index/deskstop/technics/jet-ski.png 1x, img/index/deskstop/technics/jet-ski@2x.png 2x,">
+              <img class="technics__img technics__img--jet-ski" src="img/index/mobile/technics/jet-ski.png" srcset="img/index/mobile/technics/jet-ski@2x.png 2x" width="121" height="65" alt="гидроцикл цинего-белого цвета">
+            </picture>
           </li>
           <li class="technics__item">
             <div class="technics__wrapper">
@@ -290,7 +309,10 @@
                 </svg>
               </a>
             </div>
-            <img class="technics__img technics__img--boat" src="img/index/mobile/technics/boat.png" width="154" height="76" alt="белый катер">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/index/deskstop/technics/boat.png 1x, img/index/deskstop/technics/boat@2x.png 2x,">
+              <img class="technics__img technics__img--boat" src="img/index/mobile/technics/boat.png" srcset="img/index/mobile/technics/boat@2x.png 2x" width="154" height="76" alt="белый катер">
+            </picture>
           </li>
           <li class="technics__item">
             <div class="technics__wrapper">
@@ -303,8 +325,11 @@
                 </svg>
             </a>
             </div>
-            <img class="technics__img technics__img--snow-vehicle" src="img/index/mobile/technics/snow-vehicle.png" width="121" height="77" alt="черный снегоход">
-          </li>
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/index/deskstop/technics/snow-vehicle.png 1x, img/index/deskstop/technics/snow-vehicle@2x.png 2x">
+              <img class="technics__img technics__img--snow-vehicle" src="img/index/mobile/technics/snow-vehicle.png" srcset="img/index/mobile/technics/snow-vehicle@2x.png 2x" width="121" height="77" alt="черный снегоход">
+            </picture>
+            </li>
           <li class="technics__item">
             <div class="technics__wrapper">
               <a class="technics__link" href="#">
@@ -315,7 +340,10 @@
                   </svg>
               </a>
             </div>
-            <img class="technics__img technics__img--cross-country-vehicle" src="img/index/mobile/technics/cross-country-vehicle.png" width="117" height="75" alt="черный вездеход">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/index/deskstop/technics/cross-country-vehicle.png 1x, img/index/deskstop/technics/cross-country-vehicle@2x.png 2x">
+              <img class="technics__img technics__img--cross-country-vehicle" src="img/index/mobile/technics/cross-country-vehicle.png" srcset="img/index/mobile/technics/cross-country-vehicle.png 1x" width="117" height="75" alt="черный вездеход">
+            </picture>
           </li>
           <li class="technics__item">
             <div class="technics__wrapper">
@@ -328,7 +356,11 @@
                 </svg>
             </a>
             </div>
-            <img class="technics__img technics__img--motor" src="img/index/mobile/technics/motor.png" width="60" height="103" alt="двигатель черного цвета фирмы си-про">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/index/deskstop/technics/motor.png 1x, img/index/deskstop/technics/motor@2x.png 2x">
+              <img class="technics__img technics__img--motor" src="img/index/mobile/technics/motor.png" srcset="img/index/mobile/technics/motor@2x.png 2x" width="60" height="103" alt="двигатель черного цвета фирмы си-про">
+            </picture>
+
           </li>
         </ul>
       </div>
@@ -447,12 +479,18 @@
               </a>
             </li>
           </ul>
-          <div class="product-control">
-            <button class="product-control__btn product-control__btn--prev" type="button">
+          <div class="product-control slider-control">
+            <button class="product-control__btn product-control__btn--prev slider-button slider-button-prev" type="button">
               <span class="visually-hidden">листать назад</span>
+              <svg class="product-control__icon-arrow slider-icon" width="16" height="29">
+                <use href="img/sprite.svg#icon-slider-arrow"></use>
+              </svg>
             </button>
-            <button class="product-control__btn product-control__btn--next" type="button">
+            <button class="product-control__btn product-control__btn--next slider-button slider-button-next" type="button">
               <span class="visually-hidden">листать дальше</span>
+              <svg class="product-control__icon-arrow slider-icon slider-icon-next" width="16" height="29">
+                <use href="img/sprite.svg#icon-slider-arrow"></use>
+              </svg>
             </button>
           </div>
           <div class="slider-toggles">
@@ -467,7 +505,9 @@
     <article class="banner">
       <div class="banner__container">
       <h2 class="visually-hidden">Рекламный баннер</h2>
-        <h3 class="banner__title">Скидки на все запчасти до 70%</h3>
+        <h3 class="banner__title">
+          <span>Скидки</span> <br class="banner__br-mobile-hidden">
+          на все запчасти до 70%</h3>
           <picture>
             <source media="(min-width: 1440px)" srcset="img/index/deskstop/banner/quad-bike.png 1x, img/index/deskstop/banner/quad-bike@2x.png 2x">
             <img class="banner__img banner__img--quad-bike" src="img/index/mobile/banner/quad-bike.png" srcset="img/index/mobile/banner/quad-bike@2x.png 2x" width="67" height="54" alt="квадроцикл синего цвета">
@@ -483,9 +523,9 @@
     <section class="recommended-products">
       <h2 class="recommended-products__title product-title">С этим товаром покупают</h2>
       <div class="recommended__container product-container">
-        <ul class="product-type">
-          <li class="product-type__item product-type__item--current">
-            <a class="product-type__link product-type__link--current" href="#">запчасти</a>
+        <ul class="product-type product-type--recommended">
+          <li class="product-type__item">
+            <a class="product-type__link" href="#">запчасти</a>
           </li>
           <li class="product-type__item">
             <a class="product-type__link" href="#">моторы</a>
@@ -493,8 +533,8 @@
           <li class="product-type__item">
             <a class="product-type__link" href="#">шины</a>
           </li>
-          <li class="product-type__item">
-            <a class="product-type__link" href="#">электроника</a>
+          <li class="product-type__item product-type__item--current">
+            <a class="product-type__link product-type__link--current" href="#">электроника</a>
           </li>
           <li class="product-type__item">
             <a class="product-type__link" href="#">инструменты</a>
@@ -587,12 +627,18 @@
               </a>
             </li>
           </ul>
-          <div class="product-control">
-            <button class="product-control__btn product-control__btn--prev" type="button">
+          <div class="product-control slider-control">
+            <button class="product-control__btn product-control__btn--prev slider-button slider-button-prev" type="button">
               <span class="visually-hidden">листать назад</span>
+              <svg class="product-control__icon-arrow slider-icon" width="16" height="29">
+                <use href="img/sprite.svg#icon-slider-arrow"></use>
+              </svg>
             </button>
-            <button class="product-control__btn product-control__btn--next" type="button">
+            <button class="product-control__btn product-control__btn--next slider-button slider-button-next" type="button">
               <span class="visually-hidden">листать дальше</span>
+              <svg class="product-control__icon-arrow slider-icon slider-icon-next" width="16" height="29">
+                <use href="img/sprite.svg#icon-slider-arrow"></use>
+              </svg>
             </button>
           </div>
           <div class="slider-toggles slider-toggles--margin">
@@ -614,12 +660,12 @@
           <p class="subscribe__text">Подпишитесь на нашу рассылку и узнавайте о акция быстрее</p>
           <form class="subscribe__form" action="#" method="post">
             <label class="visually-hidden" for="e-mail"></label>
-            <input class="subscribe__field" type="text" name="e-mail" id="e-mail" placeholder="Введите ваш e-mail:">
+            <input class="subscribe__field" type="text" name="e-mail" id="e-mail" required placeholder="Введите ваш e-mail:">
             <button class="subscribe__btn" type="submit">Отправить</button>
           </form>
         </div>
         <div class="footer__column">
-          <div>
+          <div class="footer__inner-wrapper">
             <button class="footer__text footer__text--information" type="button">Информация
               <svg class="footer__icon-arrow" width="6" height="9">
                 <use href="img/sprite.svg#icon-arrow"></use>
@@ -640,7 +686,7 @@
               </li>
             </ul>
           </div>
-          <div>
+          <div class="footer__inner-wrapper">
             <button class="footer__text footer__text--store" type="button">Интернет-магазин
               <svg class="footer__icon-arrow" width="6" height="9">
                 <use href="img/sprite.svg#icon-arrow"></use>
@@ -700,8 +746,8 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <a href="" class="footer__link-bottom">Договор оферты</a>
-        <a href="" class="footer__link-bottom">Политика обработки персональных данных</a>
+        <a class="footer__link-bottom" href="#" >Договор оферты</a>
+        <a class="footer__link-bottom" href="#" >Политика обработки персональных данных</a>
       </div>
     </div>
 

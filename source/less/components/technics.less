@@ -94,4 +94,73 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .technics__container {
+    width: @desktop-width;
+    padding: 0 135px;
+  }
+
+  .technics__list {
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    grid-gap: 30px;
+    width: 100%;
+  }
+
+  .technics__item {
+    width: 370px;
+    padding: 18px;
+  }
+
+  .technics__img {
+    &--quad-bike {
+      top: 22px;
+      left: 202px;
+
+      width: 130px;
+      min-height: 100px;
+    }
+
+    &--jet-ski {
+      top: 25px;
+      left: 193px;
+
+      width: 152px;
+      min-height: 81px;
+    }
+
+    &--boat {
+      top: 13px;
+      left: 157px;
+
+      width: 207px;
+      min-height: 101px;
+    }
+
+    &--snow-vehicle {
+      top: 11px;
+      left: 185px;
+
+      width: 165px;
+      min-height: 105px;
+    }
+
+    &--cross-country-vehicle {
+      top: 15px;
+      left: 190px;
+
+      width: 157px;
+      min-height: 101px;
+    }
+
+    &--motor {
+      top: 7px;
+      left: 227px;
+
+      width: 66px;
+      min-height: 113px;
+    }
+  }
+}
+
 

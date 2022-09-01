@@ -28,6 +28,10 @@
   color: #ffffff;
 }
 
+.banner__br-mobile-hidden {
+  display: none;
+}
+
 .banner__img {
   position: absolute;
 
@@ -54,4 +58,71 @@
   text-transform: uppercase;
 
   background-color: #ffffff;
+}
+
+@media (min-width: @desktop-width) {
+  .banner {
+    width: @desktop-width;
+    padding: 0 135px;
+    min-height: 165px;
+    margin-bottom: 72px;
+  }
+
+  .banner__container {
+    position: relative;
+
+    display: flex;
+    width: 100%;
+    min-height: 165px;
+    padding: 28px 123px;
+  }
+
+  .banner__title {
+    width: 310px;
+    margin: 0;
+    margin-left: auto;
+
+    font-size: 36px;
+    line-height: 36px;
+    text-align: start;
+  }
+
+  .banner__title > span {
+    text-transform: uppercase;
+  }
+
+  .banner__br-mobile-hidden {
+    display: block;
+  }
+
+  .banner__img {
+    &--quad-bike {
+      top: 33px;
+      left: 71px;
+
+      width: 152px;
+      height: 116px;
+    }
+
+    &--cross-country-vehicle {
+      top: 33px;
+      left: 223px;
+
+      width: 175px;
+      height: 113px;
+    }
+  }
+
+  .banner__link {
+    display: block;
+    width: 284px;
+    height: 57px;
+    margin: 0;
+    margin-top: 25px;
+    padding-top: 3px;
+    margin-left: 10px;
+
+    font-size: 24px;
+    line-height: 50px;
+  }
 }

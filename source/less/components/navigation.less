@@ -85,3 +85,69 @@
 .navigation__text-address {
   margin: 0;
 }
+
+@media (min-width: @desktop-width) {
+  .navigation {
+    display: block;
+    width: 100%;
+    min-height: 53px;
+
+    background-color: #f0f0f4;
+    border: 0;
+  }
+
+  .navigation__list {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 1px 60px;
+    width: @desktop-width;
+
+    margin: 0 auto;
+    padding: 0 135px;
+  }
+
+  .navigation__item {
+    position: relative;
+
+    width: auto;
+    min-height: 53px;
+
+    border: 0;
+
+    &--address {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+    }
+
+    &--current::before {
+      position: absolute;
+      content: "";
+      right: 0;
+      left: 0;
+      bottom: 0;
+
+      height: 3px;
+
+      background-color: @second-fill-color;
+    }
+  }
+
+  .navigation__link {
+    position: relative;
+
+    display: block;
+    width: auto;
+    min-height: 53px;
+    margin: 0;
+    padding: 0;
+    padding-top: 11px;
+    padding-bottom: 13px;
+
+    &--current {
+      font-weight: 600;
+    }
+  }
+}
