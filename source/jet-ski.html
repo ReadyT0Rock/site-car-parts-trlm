@@ -209,56 +209,59 @@
       </div>
     </section>
 
-    <div class="container">
-      <div class="jet-ski-wrapper">
+    <div class="jet-ski">
+        <div class="jet-ski__container">
         <section class="filter-jet-ski">
           <form class="filter-jet-ski__form" action="#" method="get">
             <h2 class="visually-hidden">Фильтр</h2>
-            <div class="filter-jet-ski__type-btn filter-jet-ski__type-btn--current">
-              <button class="filter-jet-ski__btn" type="button">Параметры</button>
+            <div class="filter-jet-ski__type-btn">
+              <button class="filter-jet-ski__btn filter-jet-ski__btn--current" type="button">Параметры</button>
               <button class="filter-jet-ski__btn" type="button">По марке</button>
             </div>
-            <fieldset class="filter-jet-ski__group filter-jet-ski__group-availability">
-              <legend class="filter-jet-ski__item">Наличие</legend>
-              <button class="filter-jet-ski__btn-show-hide">
+            <fieldset class="filter-jet-ski__group filter-jet-ski__group--availability">
+              <legend class="filter-jet-ski__legend">
+                <button class="filter-jet-ski__btn-show-hide">
                 <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
-              </button>
-              <ul class="filter-jet-ski__list">
+              </button>Наличие
+            </legend>
+                <ul class="filter-jet-ski__list filter-jet-ski__list--available">
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="available" id="available">
-                  <label for="available">В наличие</label>
+                  <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="available" id="available">
+                  <label class="filter-jet-ski__label" for="available">В наличие</label>
                 </li>
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="on-order" id="on-order">
-                  <label for="on-order">Под заказ</label>
+                  <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="on-order" id="on-order">
+                  <label class="filter-jet-ski__label" for="on-order">Под заказ</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-jet-ski__group">
-              <legend class="filter-jet-ski__item">Новинки</legend>
-              <button class="filter-jet-ski__btn-show-hide">
-                <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
-              </button>
-              <ul class="filter-jet-ski__list">
+            <fieldset class="filter-jet-ski__group filter-jet-ski__group--new">
+              <legend class="filter-jet-ski__legend">
+                <button class="filter-jet-ski__btn-show-hide">
+                  <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
+                </button>Новинки
+                </legend>
+              <ul class="filter-jet-ski__list filter-jet-ski__list--new">
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="all" id="all" checked>
-                  <label for="all">Все</label>
+                  <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="all" id="all" checked>
+                  <label class="filter-jet-ski__label" for="all">Все</label>
                 </li>
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="new" id="new">
-                  <label for="new">Новинки</label>
+                  <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="new" id="new">
+                  <label class="filter-jet-ski__label" for="new">Новинки</label>
                 </li>
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="stock" id="stock">
-                  <label for="stock">Акции</label>
+                  <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="stock" id="stock">
+                  <label class="filter-jet-ski__label" for="stock">Акции</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-jet-ski__group">
-              <legend class="filter-jet-ski__item">Цена</legend>
-              <button class="filter-jet-ski__btn-show-hide">
+            <fieldset class="filter-jet-ski__group filter-jet-ski__group--price">
+              <legend class="filter-jet-ski__legend filter-jet-ski__legend--price">
+                <button class="filter-jet-ski__btn-show-hide">
                 <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
-              </button>
+              </button>Цена
+            </legend>
               <div class="range">
                 <div class="range__scale">
                   <div class="range__bar">
@@ -272,16 +275,16 @@
                 </div>
                 <div class="range__inputs">
                   <label class="range__label">от
-                    <input class="range__input" type="number" name="min-price" value="100000">
+                    <input class="range__input" type="number" name="min-price" placeholder="100 000">
                   </label>
                   <label class="range__label">до
-                    <input class="range__input" type="number" name="max-price" value="500000">
+                    <input class="range__input" type="number" name="max-price" placeholder="500 000">
                   </label>
                 </div>
               </div>
             </fieldset>
-            <fieldset class="filter-jet-ski__group">
-              <legend class="filter-jet-ski__item">Мощность, л.с.</legend>
+            <fieldset class="filter-jet-ski__group filter-jet-ski__group--select">
+              <legend class="filter-jet-ski__legend filter-jet-ski__legend--select">Мощность, л.с.</legend>
               <select class="filter-jet-ski__select" name="power" id="power">
                 <option class="filter-jet-ski__option" value="90">90</option>
                 <option class="filter-jet-ski__option" value="130">130</option>
@@ -290,83 +293,87 @@
                 <option class="filter-jet-ski__option" value="300">300</option>
               </select>
             </fieldset>
-            <fieldset class="filter-jet-ski__group">
-              <legend class="filter-jet-ski__item">Мощность двигателя, л.с.</legend>
+            <fieldset class="filter-jet-ski__group filter-jet-ski__group--select">
+              <legend class="filter-jet-ski__legend filter-jet-ski__legend--select">Мощность двигателя, л.с.</legend>
               <select class="filter-jet-ski__select" name="power-motor" id="power-motor">
                 <option class="filter-jet-ski__option" value="55">55</option>
               </select>
             </fieldset>
-            <fieldset class="filter-jet-ski__group">
-              <legend class="filter-jet-ski__item">Макс. скорость</legend>
+            <fieldset class="filter-jet-ski__group filter-jet-ski__group--select filter-jet-ski__group--select-margin-reset">
+              <legend class="filter-jet-ski__legend filter-jet-ski__legend--select">Макс. скорость</legend>
               <select class="filter-jet-ski__select" name="speed" id="speed">
                 <option class="filter-jet-ski__option" value="205">205</option>
               </select>
             </fieldset>
-            <fieldset class="filter-jet-ski__group">
-              <legend class="filter-jet-ski__item">Бренд</legend>
-              <button class="filter-jet-ski__btn-show-hide">
+            <fieldset class="filter-jet-ski__group filter-jet-ski__group--brand">
+              <!-- TODO: Удалить класс legend--brand и из css тоже -->
+              <legend class="filter-jet-ski__legend filter-jet-ski__legend--brand">
+                <button class="filter-jet-ski__btn-show-hide">
                 <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
-              </button>
-              <ul class="filter-jet-ski__list">
+              </button>Бренд
+              </legend>
+              <ul class="filter-jet-ski__list filter-jet-ski__list--brand">
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="brp" id="brp" checked>
-                  <label for="brp">BRP</label>
+                  <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="brp" id="brp" checked>
+                  <label class="filter-jet-ski__label" for="brp">BRP</label>
                 </li>
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="spark2" id="spark2" checked>
-                  <label for="spark2">Spark 2</label>
+                  <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="spark2" id="spark2" checked>
+                  <label class="filter-jet-ski__label" for="spark2">Spark 2</label>
                 </li>
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="spark3" id="spark3">
-                  <label for="spark3">Spark 3</label>
+                  <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="spark3" id="spark3">
+                  <label class="filter-jet-ski__label" for="spark3">Spark 3</label>
                 </li>
               </ul>
               <a class="filter-jet-ski__show-more" href="#">Показать еще</a>
             </fieldset>
-            <fieldset class="filter-jet-ski__group">
-              <legend class="filter-jet-ski__item">Модель</legend>
-              <button class="filter-jet-ski__btn-show-hide">
+            <fieldset class="filter-jet-ski__group filter-jet-ski__group--model">
+              <legend class="filter-jet-ski__legend">
+                <button class="filter-jet-ski__btn-show-hide">
                 <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
-              </button>
-              <form class="filter-jet-ski__model-form" action="#" method="post">
+              </button>Модель
+            </legend>
+              <div class="filter-jet-ski__wrapper-search-model">
                 <label class="visually-hidden" for="search-model">Поле поиска по модели</label>
-                <input type="text" class="filter-jet-ski__field-search-model" name="search-model" id="search-model" placeholder="Введите модель">
-              </form>
-              <ul class="filter-jet-ski__list">
+                <input class="filter-jet-ski__field-search-model" type="text" name="search-model" id="search-model" placeholder="Введите модель">
+              </div>
+              <ul class="filter-jet-ski__list filter-jet-ski__list--model">
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="seadoo-spark2" id="seadoo-spark2"
+                  <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="seadoo-spark2" id="seadoo-spark2"
                     checked>
-                  <label for="seadoo-spark2">Sea-doo Spark 2</label>
+                  <label class="filter-jet-ski__label" for="seadoo-spark2">Sea-doo Spark 2</label>
                 </li>
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="seadoo-spark90" id="seadoo-spark90"
+                  <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="seadoo-spark90" id="seadoo-spark90"
                     checked>
-                  <label for="seadoo-spark90">SeaDoo Spark 90</label>
+                  <label class="filter-jet-ski__label" for="seadoo-spark90">SeaDoo Spark 90</label>
                 </li>
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="seadoo-gti155" id="seadoo-gti155">
-                  <label for="seadoo-gti155">SeaDoo GTI 155</label>
+                  <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="seadoo-gti155" id="seadoo-gti155">
+                  <label class="filter-jet-ski__label" for="seadoo-gti155">SeaDoo GTI 155</label>
                 </li>
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="gtr230" id="gtr230">
-                  <label for="gtr230">SeaDoo GTR 230</label>
+                  <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="gtr230" id="gtr230">
+                  <label class="filter-jet-ski__label" for="gtr230">SeaDoo GTR 230</label>
                 </li>
               </ul>
               <a class="filter-jet-ski__show-more" href="#">Показать еще</a>
             </fieldset>
-            <fieldset class="filter-jet-ski__group">
-              <legend class="filter-jet-ski__item">Акции</legend>
-              <button class="filter-jet-ski__btn-show-hide" type="button">
-                <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
-              </button>
+            <fieldset class="filter-jet-ski__group filter-jet-ski__group--stock">
+              <legend class="filter-jet-ski__legend">
+                <button class="filter-jet-ski__btn-show-hide" type="button">
+                  <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
+                </button>Акции
+              </legend>
               <ul class="filter-jet-ski__stock">
                 <li class="filter-jet-ski__item-stock">
                   <input type="checkbox" class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--sale visually-hidden" name="sale" id="sale" checked>
                   <label for="sale">Sale</label>
                 </li>
                 <li class="filter-jet-ski__item-stock">
-                  <input type="checkbox" class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--new visually-hidden" name="new" id="new">
-                  <label for="new">New</label>
+                  <input type="checkbox" class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--new visually-hidden" name="stock-new" id="stock-new">
+                  <label for="stock-new">New</label>
                 </li>
                 <li class="filter-jet-ski__item-stock">
                   <input type="checkbox" class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--hit visually-hidden" name="hit" id="hit">
@@ -378,27 +385,28 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-jet-ski__group">
-              <legend class="filter-jet-ski__item">Страны</legend>
-              <button class="filter-jet-ski__btn-show-hide" type="button">
+            <fieldset class="filter-jet-ski__group filter-jet-ski__group--countries">
+              <legend class="filter-jet-ski__legend">
+                <button class="filter-jet-ski__btn-show-hide" type="button">
                 <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
-              </button>
+              </button>Страны
+              </legend>
               <ul class="filter-jet-ski__list">
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="russia" id="russia" checked>
-                  <label for="russia">Россия</label>
+                  <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="russia" id="russia" checked>
+                  <label class="filter-jet-ski__label" for="russia">Россия</label>
                 </li>
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="Germany" id="Germany" checked>
-                  <label for="Germany">Германия</label>
+                  <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="Germany" id="Germany" checked>
+                  <label class="filter-jet-ski__label" for="Germany">Германия</label>
                 </li>
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="China" id="China">
-                  <label for="China">Китай</label>
+                  <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="China" id="China">
+                  <label class="filter-jet-ski__label" for="China">Китай</label>
                 </li>
                 <li class="filter-jet-ski__item">
-                  <input class="filter-jet-ski__checkbox" type="checkbox" name="usa" id="usa">
-                  <label for="usa">Сша</label>
+                  <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="usa" id="usa">
+                  <label class="filter-jet-ski__label" for="usa">Сша</label>
                 </li>
               </ul>
               <a class="filter-jet-ski__show-more" href="#">Показать еще</a>
@@ -413,7 +421,7 @@
 
         <section class="products">
           <h2 class="visually-hidden">Список товаров</h2>
-          <ul class="product products__list">
+          <ul class="product product--catalog products__list">
             <li class="product__item">
                 <button class="product__btn-favourite">
                   <span class="visually-hidden">Добавить в избранное</span>
@@ -702,9 +710,9 @@
     <section class="recommended-products">
       <h2 class="recommended-products__title product-title">С этим товаром покупают</h2>
       <div class="recommended__container product-container">
-        <ul class="product-type">
-          <li class="product-type__item product-type__item--current">
-            <a class="product-type__link product-type__link--current" href="#">запчасти</a>
+        <ul class="product-type product-type--recommended">
+          <li class="product-type__item">
+            <a class="product-type__link" href="#">запчасти</a>
           </li>
           <li class="product-type__item">
             <a class="product-type__link" href="#">моторы</a>
@@ -712,8 +720,8 @@
           <li class="product-type__item">
             <a class="product-type__link" href="#">шины</a>
           </li>
-          <li class="product-type__item">
-            <a class="product-type__link" href="#">электроника</a>
+          <li class="product-type__item product-type__item--current">
+            <a class="product-type__link product-type__link--current" href="#">электроника</a>
           </li>
           <li class="product-type__item">
             <a class="product-type__link" href="#">инструменты</a>
@@ -806,15 +814,21 @@
               </a>
             </li>
           </ul>
-          <div class="product-control">
-            <button class="product-control__btn product-control__btn--prev" type="button">
+          <div class="product-control slider-control">
+            <button class="product-control__btn product-control__btn--prev slider-button slider-button-prev" type="button">
               <span class="visually-hidden">листать назад</span>
+              <svg class="product-control__icon-arrow slider-icon" width="16" height="29">
+                <use href="img/sprite.svg#icon-slider-arrow"></use>
+              </svg>
             </button>
-            <button class="product-control__btn product-control__btn--next" type="button">
+            <button class="product-control__btn product-control__btn--next slider-button slider-button-next" type="button">
               <span class="visually-hidden">листать дальше</span>
+              <svg class="product-control__icon-arrow slider-icon slider-icon-next" width="16" height="29">
+                <use href="img/sprite.svg#icon-slider-arrow"></use>
+              </svg>
             </button>
           </div>
-          <div class="slider-toggles slider-toggles--2">
+          <div class="slider-toggles slider-toggles--margin">
             <button class="slider-toggles__toggle slider-toggles__toggle--current" type="button">1</button>
             <button class="slider-toggles__toggle" type="button">2</button>
             <button class="slider-toggles__toggle" type="button">3</button>
@@ -886,7 +900,7 @@
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Мы в контакте</span>
-                <svg width="30" height="18">
+                <svg class="social__icon" width="30" height="18">
                   <use href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
@@ -894,7 +908,7 @@
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Мы в фейсбук</span>
-                <svg width="30" height="30">
+                <svg class="social__icon" width="30" height="30">
                   <use href="img/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
@@ -902,7 +916,7 @@
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Мы в ютьюб</span>
-                <svg width="30" height="30">
+                <svg class="social__icon" width="30" height="30">
                   <use href="img/sprite.svg#icon-youtube"></use>
                 </svg>
               </a>
@@ -911,8 +925,8 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <a class="footer__link-bottom" href="#" >Договор оферты</a>
-        <a class="footer__link-bottom" href="#" >Политика обработки персональных данных</a>
+        <a class="footer__link-bottom" href="#">Договор оферты</a>
+        <a class="footer__link-bottom" href="#">Политика обработки персональных данных</a>
       </div>
     </div>
 
