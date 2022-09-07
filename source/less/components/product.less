@@ -135,8 +135,13 @@
 
   cursor: pointer;
 
+  &:hover {
+    background-color: darken(@second-bg-color, 10%);
+  }
+
   &:active {
-    opacity: 0.5;
+    background-color: darken(@second-bg-color, 10%);
+    opacity: 0.7;
   }
 }
 

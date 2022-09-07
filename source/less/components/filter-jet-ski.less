@@ -111,7 +111,8 @@
     }
 
     &--stock {
-      min-height: 163px;
+      min-height: 63px;
+      margin-bottom: 40px;
     }
 
     &--countries {
@@ -149,6 +150,14 @@
     &--brand {
       margin-bottom: 23px;
     }
+
+    &--stock {
+      margin-bottom: 23px;
+    }
+
+    &--country {
+        margin-bottom: 20px;
+    }
   }
 
   .filter-jet-ski__btn-show-hide {
@@ -156,12 +165,14 @@
     top: 8px;
     left: -3px;
 
-    width: 12px;
-    min-height: 7.4px;
+    width: 14px;
+    min-height: 14px;
     padding: 0;
 
     background: url("../../img/btn-show-hide.svg") no-repeat;
     border: 0;
+
+    cursor: pointer;
   }
 
   .filter-jet-ski__list {
@@ -195,6 +206,14 @@
 
       & li:not(:last-child) {
         margin-right: 16px;
+      }
+    }
+
+    &--country {
+      & li {
+        width: 86px;
+        margin-right: 55px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -307,6 +326,41 @@
 
     border: 1px solid #c4c4c4;
     border-radius: 3px;
+
+    cursor: pointer;
+  }
+
+  .filter-jet-ski__checkbox:hover + .filter-jet-ski__label::before {
+    border: 1px solid @main-fill-color;
+  }
+
+  .filter-jet-ski__checkbox:checked + .filter-jet-ski__label::before {
+    background-color: @second-bg-color;
+    border: 0;
+  }
+
+  .filter-jet-ski__checkbox:checked + .filter-jet-ski__label::after {
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: 3px;
+
+    width: 8px;
+    height: 6px;
+
+    background: url("../../img/checkbox-check.svg") no-repeat;
+
+    cursor: pointer;
+  }
+
+  .filter-jet-ski__checkbox:hover:checked + .filter-jet-ski__label::before,
+  .filter-jet-ski__checkbox:hover:checked + .filter-jet-ski__label::after {
+    opacity: 0.7;
+  }
+
+  .filter-jet-ski__checkbox:active:checked + .filter-jet-ski__label::before,
+  .filter-jet-ski__checkbox:active:checked + .filter-jet-ski__label::after {
+    opacity: 0.5;
   }
 
   .filter-jet-ski__select {
@@ -340,6 +394,48 @@
     }
   }
 
+  .filter-jet-ski__stock {
+    display: flex;
+  }
+
+  .filter-jet-ski__item-stock {
+    margin-right: 10px;
+  }
+
+  .filter-jet-ski__label-stock {
+    position: relative;
+  }
+
+  .filter-jet-ski__stock span {
+    min-height: 25px;
+    padding: 6px 15px;
+
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #c4c4c4;
+
+    background-color: #f0f0f4;
+
+    cursor: pointer;
+  }
+
+  .filter-jet-ski__checkbox-jet-ski {
+    &:checked + span {
+      color: #ffffff;
+    }
+
+    &--sale:checked + span {
+      background-color: @second-bg-color;
+    }
+
+    &--dealer:checked + span {
+      background-color: @main-fill-color;
+    }
+  }
+
   .filter-jet-ski__wrapper-bottom {
     display: flex;
     flex-direction: column;
@@ -356,6 +452,8 @@
 
     background-color: transparent;
     border: 0;
+
+    cursor: pointer;
   }
 
   .filter-jet-ski__stock {
@@ -378,6 +476,18 @@
 
     background-color: #f0f0f4;
     border: 0;
+
+    &:hover {
+      color: darken(#bdbec2, 5%);
+
+      background-color: darken(#f0f0f4, 5%);
+    }
+
+    &:active {
+      color: #f0f0f4;
+
+      background-color: darken(#f0f0f4, 15%);
+    }
   }
 
   .filter-jet-ski__extra-options,

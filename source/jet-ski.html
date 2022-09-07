@@ -361,37 +361,45 @@
               <a class="filter-jet-ski__show-more" href="#">Показать еще</a>
             </fieldset>
             <fieldset class="filter-jet-ski__group filter-jet-ski__group--stock">
-              <legend class="filter-jet-ski__legend">
+              <legend class="filter-jet-ski__legend filter-jet-ski__legend--stock">
                 <button class="filter-jet-ski__btn-show-hide" type="button">
                   <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
                 </button>Акции
               </legend>
               <ul class="filter-jet-ski__stock">
                 <li class="filter-jet-ski__item-stock">
-                  <input type="checkbox" class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--sale visually-hidden" name="sale" id="sale" checked>
-                  <label for="sale">Sale</label>
+                  <label class="filter-jet-ski__label-stock" for="sale">
+                    <input class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--sale visually-hidden" type="checkbox"  name="sale" id="sale" checked>
+                    <span>sale</span>
+                  </label>
                 </li>
                 <li class="filter-jet-ski__item-stock">
-                  <input type="checkbox" class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--new visually-hidden" name="stock-new" id="stock-new">
-                  <label for="stock-new">New</label>
+                  <label class="filter-jet-ski__label-stock" for="stock-new">
+                    <input class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--new visually-hidden" type="checkbox" name="stock-new" id="stock-new">
+                    <span>New</span>
+                  </label>
                 </li>
                 <li class="filter-jet-ski__item-stock">
-                  <input type="checkbox" class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--hit visually-hidden" name="hit" id="hit">
-                  <label for="hit">Hit</label>
+                  <label class="filter-jet-ski__label-stock" for="hit">
+                    <input class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--hit visually-hidden" type="checkbox"  name="hit" id="hit">
+                    <span>Hit</span>
+                  </label>
                 </li>
                 <li class="filter-jet-ski__item-stock">
-                  <input type="checkbox" class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--dealer visually-hidden" name="dealer" id="dealer" checked>
-                  <label for="dealer">Дилер</label>
+                  <label class="filter-jet-ski__label-stock" for="dealer">
+                    <input class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--dealer visually-hidden" type="checkbox"  name="dealer" id="dealer" checked>
+                    <span>Дилер</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="filter-jet-ski__group filter-jet-ski__group--countries">
-              <legend class="filter-jet-ski__legend">
+              <legend class="filter-jet-ski__legend filter-jet-ski__legend--country">
                 <button class="filter-jet-ski__btn-show-hide" type="button">
                 <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
               </button>Страны
               </legend>
-              <ul class="filter-jet-ski__list">
+              <ul class="filter-jet-ski__list filter-jet-ski__list--country">
                 <li class="filter-jet-ski__item">
                   <input class="filter-jet-ski__checkbox visually-hidden" type="checkbox" name="russia" id="russia" checked>
                   <label class="filter-jet-ski__label" for="russia">Россия</label>
@@ -852,7 +860,7 @@
           </form>
         </div>
         <div class="footer__column">
-          <div>
+          <div class="footer__inner-wrapper">
             <button class="footer__text footer__text--information" type="button">Информация</button>
             <ul class="footer__list footer__list--information footer__list--information-closed footer__list--nojs">
               <li class="footer__item">
@@ -869,7 +877,7 @@
               </li>
             </ul>
           </div>
-          <div>
+          <div class="footer__inner-wrapper">
             <button class="footer__text footer__text--store" type="button">Интернет-магазин</button>
             <ul class="footer__list footer__list--store footer__list--store-closed footer__list--nojs">
               <li class="footer__item">
