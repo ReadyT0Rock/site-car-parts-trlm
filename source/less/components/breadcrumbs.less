@@ -45,9 +45,6 @@
   font-size: 15px;
   line-height: 18px;
   color: #c4c4c4;
-
-  // TODO: УДАЛИТЬ
-  white-space: nowrap;
 }
 
 .header-inner-title {
@@ -57,4 +54,26 @@
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+}
+
+@media (min-width: @desktop-width) {
+  .breadcrumbs {
+    margin-bottom: 13px;
+  }
+
+  .breadcrumbs__container {
+    width: @desktop-width;
+    padding: 0 135px;
+  }
+
+  .breadcrumbs__list {
+    margin-bottom: 40px;
+  }
+
+  .header-inner-title {
+    margin: 0;
+
+    font-size: 30px;
+    line-height: 36px;
+  }
 }

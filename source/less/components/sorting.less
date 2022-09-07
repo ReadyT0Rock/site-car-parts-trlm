@@ -118,3 +118,86 @@
     text-decoration: underline;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .sorting {
+    min-height: 50px;
+    margin-bottom: 34px;
+  }
+
+  .sorting__container {
+    display: flex;
+    width: @desktop-width;
+    margin: 0 auto;
+    padding: 0 135px;
+
+  }
+
+  .sorting__wrapper-type {
+    margin-bottom: 0;
+    order: 2;
+
+    border: 0;
+  }
+
+  .sorting__form {
+    display: flex;
+    justify-content: flex-end;
+    width: 300px;
+    padding: 0;
+  }
+
+  .sorting__select {
+    width: 178px;
+    height: 33px;
+    margin-top: 7px;
+    margin-right: 34px;
+    padding: 4px 46px 4px 20px;
+
+    font-family: "SF Pro Display", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+
+    border: 1.5px solid #d7d9df;
+    background: none;
+  }
+
+  .sorting__card-grid-toogle {
+    margin-top: 12px;
+  }
+
+  .sorting__btn-toggle {
+    margin: 0;
+
+    &--table {
+      margin-right: 10px;
+    }
+  }
+
+  .sorting__wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 12px;
+  }
+
+  .sorting__list {
+    overflow-x: auto;
+  }
+
+  .sorting__item {
+    margin-right: 10px;
+
+    background: #f0f0f4;
+    border-radius: 3px;
+  }
+
+  .sorting__link {
+    display: block;
+    min-height: 25px;
+    padding: 4px 0;
+
+    white-space: wrap;
+  }
+}

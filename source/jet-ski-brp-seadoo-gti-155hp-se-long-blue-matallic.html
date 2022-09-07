@@ -380,9 +380,9 @@
     <section class="recommended-products">
       <h2 class="recommended-products__title product-title">С этим товаром покупают</h2>
       <div class="recommended__container product-container">
-        <ul class="product-type">
-          <li class="product-type__item product-type__item--current">
-            <a class="product-type__link product-type__link--current" href="#">запчасти</a>
+        <ul class="product-type product-type--recommended">
+          <li class="product-type__item">
+            <a class="product-type__link" href="#">запчасти</a>
           </li>
           <li class="product-type__item">
             <a class="product-type__link" href="#">моторы</a>
@@ -390,8 +390,8 @@
           <li class="product-type__item">
             <a class="product-type__link" href="#">шины</a>
           </li>
-          <li class="product-type__item">
-            <a class="product-type__link" href="#">электроника</a>
+          <li class="product-type__item product-type__item--current">
+            <a class="product-type__link product-type__link--current" href="#">электроника</a>
           </li>
           <li class="product-type__item">
             <a class="product-type__link" href="#">инструменты</a>
@@ -484,15 +484,21 @@
               </a>
             </li>
           </ul>
-          <div class="product-control">
-            <button class="product-control__btn product-control__btn--prev" type="button">
+          <div class="product-control slider-control">
+            <button class="product-control__btn product-control__btn--prev slider-button slider-button-prev" type="button">
               <span class="visually-hidden">листать назад</span>
+              <svg class="product-control__icon-arrow slider-icon" width="16" height="29">
+                <use href="img/sprite.svg#icon-slider-arrow"></use>
+              </svg>
             </button>
-            <button class="product-control__btn product-control__btn--next" type="button">
+            <button class="product-control__btn product-control__btn--next slider-button slider-button-next" type="button">
               <span class="visually-hidden">листать дальше</span>
+              <svg class="product-control__icon-arrow slider-icon slider-icon-next" width="16" height="29">
+                <use href="img/sprite.svg#icon-slider-arrow"></use>
+              </svg>
             </button>
           </div>
-          <div class="slider-toggles slider-toggles--2">
+          <div class="slider-toggles slider-toggles--margin">
             <button class="slider-toggles__toggle slider-toggles__toggle--current" type="button">1</button>
             <button class="slider-toggles__toggle" type="button">2</button>
             <button class="slider-toggles__toggle" type="button">3</button>
@@ -516,7 +522,7 @@
           </form>
         </div>
         <div class="footer__column">
-          <div>
+          <div class="footer__inner-wrapper">
             <button class="footer__text footer__text--information" type="button">Информация</button>
             <ul class="footer__list footer__list--information footer__list--information-closed footer__list--nojs">
               <li class="footer__item">
@@ -533,7 +539,7 @@
               </li>
             </ul>
           </div>
-          <div>
+          <div class="footer__inner-wrapper">
             <button class="footer__text footer__text--store" type="button">Интернет-магазин</button>
             <ul class="footer__list footer__list--store footer__list--store-closed footer__list--nojs">
               <li class="footer__item">
@@ -564,7 +570,7 @@
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Мы в контакте</span>
-                <svg width="30" height="18">
+                <svg class="social__icon" width="30" height="18">
                   <use href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
@@ -572,7 +578,7 @@
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Мы в фейсбук</span>
-                <svg width="30" height="30">
+                <svg class="social__icon" width="30" height="30">
                   <use href="img/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
@@ -580,7 +586,7 @@
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Мы в ютьюб</span>
-                <svg width="30" height="30">
+                <svg class="social__icon" width="30" height="30">
                   <use href="img/sprite.svg#icon-youtube"></use>
                 </svg>
               </a>
@@ -589,8 +595,8 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <a class="footer__link-bottom" href="#" >Договор оферты</a>
-        <a class="footer__link-bottom" href="#" >Политика обработки персональных данных</a>
+        <a class="footer__link-bottom" href="#">Договор оферты</a>
+        <a class="footer__link-bottom" href="#">Политика обработки персональных данных</a>
       </div>
     </div>
 
