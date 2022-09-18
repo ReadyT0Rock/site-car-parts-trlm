@@ -177,7 +177,10 @@
         <div class="product-card__wrapper">
           <div class="column-left">
             <span class="product-card__sale">Sale</span>
-            <img class="product-card__img" src="img/jet-ski-brp-seadoo-gti-155hp-se-long-blue-matallic/brp-seadoo-gti-155hp-se-long-blue-metallic.jpg" width="250" height="188" alt="гидроцикл темно-бирюзового цвета">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/jet-ski-brp-seadoo-gti-155hp-se-long-blue-matallic/desktop/brp-seadoo-gti-155hp-se-long-blue-metallic.jpg 1x, img/jet-ski-brp-seadoo-gti-155hp-se-long-blue-matallic/desktop/brp-seadoo-gti-155hp-se-long-blue-metallic@2x.jpg 2x">
+            <img class="product-card__img" src="img/jet-ski-brp-seadoo-gti-155hp-se-long-blue-matallic/mobile/brp-seadoo-gti-155hp-se-long-blue-metallic.jpg" srcset="img/jet-ski-brp-seadoo-gti-155hp-se-long-blue-matallic/mobile/brp-seadoo-gti-155hp-se-long-blue-metallic@2x.jpg 2x" width="250" height="188" alt="гидроцикл темно-бирюзового цвета">
+          </picture>
             <div class="product-card__price-wrapper">
             <b class="product-card__price-prev">1 200 475 ₽</b>
             <b class="product-card__price-new">1 100 475 ₽</b>
@@ -227,7 +230,7 @@
               </li>
             </ul>
             <div class="product-card__btn-wrapper">
-              <button class="product-card__btn product-card__btn--current" type="button">Характеристики</button>
+              <button class="product-card__btn product-card__btn--characteristics product-card__btn--current" type="button">Характеристики</button>
               <a class="product-card__btn" href="#self-delivery">Наличие в магазине</a>
             </div>
             <ul class="product-card__list">
@@ -251,6 +254,7 @@
                 <p class="product-card__text">Год выпуска</p>
                 <p class="product-card__text">2018</p>
               </li>
+
               <li class="product-card__item">
                 <a class="product-card__link-show-all-characteristics" href="#characteristics">Показать еще</a>
               </li>
@@ -289,12 +293,12 @@
               <label class="self-delivery__label self-delivery__label--search" for="search-store">Магазин</label>
               <input class="self-delivery__input-search" type="text" name="search-store" id="search-store" placeholder="Введите название магазина">
               <p class="self-delivery__inner-wrapper">
-                <label class="self-delivery__label" for="today">Забрать сегодня</label>
-                <input class="self-delivery__checkbox" type="checkbox" name="today" id="today">
+                <input class="self-delivery__checkbox visually-hidden" type="checkbox" name="today" id="today">
+                <label class="self-delivery__label self-delivery__label--checkbox" for="today">Забрать сегодня</label>
               </p>
               <p class="self-delivery__inner-wrapper">
-                <label class="self-delivery__label" for="week">Забрать в течение недели</label>
-                <input class="self-delivery__checkbox" type="checkbox" name="week" id="week">
+                <input class="self-delivery__checkbox visually-hidden" type="checkbox" name="week" id="week" checked>
+                <label class="self-delivery__label self-delivery__label--checkbox" for="week">Забрать в течение недели</label>
               </p>
             </form>
             <ul class="self-delivery__list">
