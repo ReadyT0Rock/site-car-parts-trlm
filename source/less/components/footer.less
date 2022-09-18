@@ -8,8 +8,11 @@
   padding: 0 10px;
 }
 
-.footer__column:nth-child(2) {
-  margin-bottom: 40px;
+.footer__column {
+
+  &:nth-child(2) {
+    margin-bottom: 40px;
+  }
 }
 
 .subscribe__text {
@@ -73,6 +76,15 @@
   flex-direction: column;
 }
 
+.footer__inner-wrapper {
+  border-top: 2px solid rgba(47, 48, 53, 0.1);
+  border-bottom: 2px solid rgba(47, 48, 53, 0.1);
+
+  &:last-child {
+    border-top: 0;
+  }
+}
+
 .footer__text {
   position: relative;
 
@@ -91,6 +103,19 @@
   border: 0;
 
   cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: 7px;
+    top: 23px;
+
+    width: 12px;
+    height: 7px;
+
+    background: url("../../img/footer-btn-arrow.svg") no-repeat;
+    background-size: 12px 7px;
+  }
 }
 
 .footer__icon-arrow {
@@ -187,6 +212,8 @@
   }
 
   .footer__inner-wrapper {
+    border: 0;
+
     &:first-child {
       width: 189px;
     }
