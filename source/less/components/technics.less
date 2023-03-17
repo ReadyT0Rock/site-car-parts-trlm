@@ -38,16 +38,39 @@
 
 .technics__link {
   color: @main-color-text;
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.technics__icon {
+  fill: #c4c4c4;
 }
 
 .technics__link-more {
   position: relative;
 
+  width: 80px;
   margin-top: 46px;
 
   font-size: 14px;
   line-height: 17px;
   color: #c4c4c4;
+
+  &:hover,
+  &:hover .technics__icon {
+    color: @main-color-text;
+
+    fill: @main-fill-color;
+  }
+
+  &:active,
+  &:active .technics__icon {
+    color: #c4c4c4;
+
+    fill: #c4c4c4;
+  }
 }
 
 .technics__name {

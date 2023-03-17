@@ -73,8 +73,19 @@
   color: @main-color-text;
   letter-spacing: nowrap;
 
+  &:not(&--current):hover {
+    color: @second-color-text;
+  }
+
+  &:not(&--current):active {
+    color: @main-color-text;
+    opacity: 0.5;
+  }
+
   &--current {
     font-weight: 700;
+
+    cursor: auto;
   }
 }
 
@@ -116,6 +127,7 @@
   }
 
   .product-type {
+    flex-wrap: wrap;
     width: 100%;
     margin-bottom: 30px;
 

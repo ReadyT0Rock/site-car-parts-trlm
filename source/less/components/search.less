@@ -36,6 +36,10 @@
   }
 }
 
+.search__button--current {
+  display: flex;
+}
+
 .search__button {
   min-height: 100%;
   padding: 0;
@@ -52,8 +56,14 @@
 
   cursor: pointer;
 
+  &:hover:not(&--current) {
+    color: @second-color-text;
+  }
+
   &--current {
     font-weight: 600;
+
+    cursor: auto;
   }
 }
 
@@ -119,6 +129,7 @@
 
   .search__list {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     margin-bottom: 23px;
 

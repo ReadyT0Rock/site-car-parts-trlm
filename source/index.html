@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет-магазин экстремальной техники: Drive Moto</title>
+  <link rel="preload" href="fonts/san-francisco-pro-display-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/san-francisco-pro-display-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/san-francisco-pro-display-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/barlow-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/barlow-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="img/favicons/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png">
@@ -272,7 +277,7 @@
                 <h3 class="technics__name">Квадроциклы</h3>
               </a>
               <a class="technics__link-more" href="#">Подробнее
-                <svg width="6" height="9">
+                <svg class="technics__icon" width="6" height="9">
                   <use href="img/sprite.svg#icon-arrow"></use>
                 </svg>
               </a>
@@ -288,7 +293,7 @@
                 <h3 class="technics__name">Гидроциклы</h3>
               </a>
               <a class="technics__link-more" href="jet-ski.html">Подробнее
-                <svg width="6" height="9">
+                <svg class="technics__icon" width="6" height="9">
                   <use href="img/sprite.svg#icon-arrow"></use>
                 </svg>
               </a>
@@ -304,7 +309,7 @@
                 <h3 class="technics__name">Катера</h3>
               </a>
               <a class="technics__link-more" href="#">Подробнее
-                <svg width="6" height="9">
+                <svg class="technics__icon" width="6" height="9">
                   <use href="img/sprite.svg#icon-arrow"></use>
                 </svg>
               </a>
@@ -320,7 +325,7 @@
                 <h3 class="technics__name">Снегоходы</h3>
               </a>
               <a class="technics__link-more" href="#">Подробнее
-                <svg width="6" height="9">
+                <svg class="technics__icon" width="6" height="9">
                   <use href="img/sprite.svg#icon-arrow"></use>
                 </svg>
             </a>
@@ -335,7 +340,7 @@
               <a class="technics__link" href="#">
                 <h3 class="technics__name">Вездеходы</h3>
                 <a class="technics__link-more" href="#">Подробнее
-                  <svg width="6" height="9">
+                  <svg class="technics__icon" width="6" height="9">
                     <use href="img/sprite.svg#icon-arrow"></use>
                   </svg>
               </a>
@@ -351,10 +356,10 @@
                 <h3 class="technics__name">Двигатели</h3>
               </a>
               <a class="technics__link-more" href="#">Подробнее
-                <svg width="6" height="9">
+                <svg class="technics__icon" width="6" height="9">
                   <use href="img/sprite.svg#icon-arrow"></use>
                 </svg>
-            </a>
+              </a>
             </div>
             <picture>
               <source media="(min-width: 1440px)" srcset="img/index/deskstop/technics/motor.png 1x, img/index/deskstop/technics/motor@2x.png 2x">
@@ -600,7 +605,7 @@
                 <p class="product__not-available">нет в наличии</p>
                 <a class="product__inform" href="#">Сообщить о поступлении</a>
               </div>
-              <a class="product__view-link" href="#">product
+              <a class="product__view-link" href="#">
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
@@ -745,9 +750,7 @@
 
   </footer>
 
-  <script src="js/script.js">
-
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 
