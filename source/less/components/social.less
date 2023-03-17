@@ -9,8 +9,17 @@
 }
 
 .social__icon {
-  fill: black;
-  stroke: black;
+  fill: @main-fill-color;
+
+}
+
+.social__link:hover .social__icon {
+  fill: @second-fill-color;
+}
+
+.social__link:active .social__icon {
+  fill: @second-fill-color;
+  opacity: 0.5;
 }
 
 @media (min-width: @desktop-width) {

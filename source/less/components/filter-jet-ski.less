@@ -18,6 +18,7 @@
 
   .filter-jet-ski__type-btn {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 44px;
   }
 
@@ -35,6 +36,13 @@
 
     background-color: transparent;
     border: 0;
+
+    &:hover:not(&--current) {
+      color: @second-color-text;
+      opacity: 1;
+
+      cursor: pointer;
+    }
 
     &--current {
       position: relative;
@@ -221,6 +229,8 @@
   .filter-jet-ski__label {
     position: relative;
     padding-left: 25px;
+
+    cursor: pointer;
   }
 
   .range {
@@ -313,6 +323,14 @@
 
       background-color: @second-fill-color;
     }
+
+    &:hover {
+      color: lighten(@second-color-text, 20%);
+    }
+
+    &:active {
+      color: lighten(@second-color-text, 40%);
+    }
   }
 
   .filter-jet-ski__checkbox + .filter-jet-ski__label::before {
@@ -381,7 +399,7 @@
   }
 
   .filter-jet-ski__field-search-model {
-    width: 100%;
+    width: 280px;
     min-height: 30px;
     padding: 8px 20px 7px;
 
@@ -391,6 +409,11 @@
       font-size: 12px;
       line-height: 14px;
       color: #bdbec2;
+    }
+
+    &:focus::placeholder {
+      opacity: 0;
+      transition: opacity 1s ease;
     }
   }
 
@@ -427,8 +450,20 @@
       color: #ffffff;
     }
 
+    &:hover:checked + span {
+      opacity: 0.8;
+    }
+
     &--sale:checked + span {
       background-color: @second-bg-color;
+    }
+
+    &--new:checked + span {
+      background-color: #11d111;
+    }
+
+    &--hit:checked + span {
+      background-color: #d11111;
     }
 
     &--dealer:checked + span {
@@ -454,6 +489,27 @@
     border: 0;
 
     cursor: pointer;
+  }
+
+  .filter-jet-ski__extra-options {
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  .filter-jet-ski__reset {
+    &:hover {
+      color: @main-color-text;
+      text-decoration: none;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
   }
 
   .filter-jet-ski__stock {

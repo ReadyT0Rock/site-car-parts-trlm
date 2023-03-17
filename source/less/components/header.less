@@ -128,8 +128,11 @@
   fill: @main-fill-color;
 
   &:hover {
-
     fill: @second-bg-color;
+  }
+
+  &:active {
+    stroke: @second-bg-color;
   }
 }
 
@@ -252,6 +255,7 @@
   }
 
   .header-top__list {
+    flex-wrap: wrap;
     justify-content: space-between;
     order: 1;
     width: 449px;

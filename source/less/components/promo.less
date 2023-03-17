@@ -48,6 +48,14 @@
 
   cursor: pointer;
 
+  &:hover {
+    border: 2px solid #ffffff;
+  }
+
+  &:active {
+    border: 2px solid @second-fill-color;
+  }
+
   &--current {
     background-color: #ffffff;
     border: none;
@@ -67,6 +75,7 @@
 
   .promo__container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     width: @desktop-width;

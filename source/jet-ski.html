@@ -5,11 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет-магазин экстремальной техники: Drive Moto</title>
+  <link rel="preload" href="fonts/san-francisco-pro-display-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/san-francisco-pro-display-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/san-francisco-pro-display-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/barlow-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/barlow-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="img/favicons/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link href="css/style.css  " rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -163,7 +168,7 @@
             <a class="breadcrumbs__link" href="index.html">Главная</a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link">Гидроциклы</a>
+            <a class="breadcrumbs__link breadcrumbs__link--current">Гидроциклы</a>
           </li>
         </ul>
         <h1 class="header-inner-title">Гидроциклы</h1>
@@ -306,8 +311,7 @@
               </select>
             </fieldset>
             <fieldset class="filter-jet-ski__group filter-jet-ski__group--brand">
-              <!-- TODO: Удалить класс legend--brand и из css тоже -->
-              <legend class="filter-jet-ski__legend filter-jet-ski__legend--brand">
+              <legend class="filter-jet-ski__legend">
                 <button class="filter-jet-ski__btn-show-hide">
                 <span class="visually-hidden">Показать, либо скрыть данный фильтр</span>
               </button>Бренд
@@ -368,26 +372,26 @@
               </legend>
               <ul class="filter-jet-ski__stock">
                 <li class="filter-jet-ski__item-stock">
-                  <label class="filter-jet-ski__label-stock" for="sale">
-                    <input class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--sale visually-hidden" type="checkbox"  name="sale" id="sale" checked>
+                  <label class="filter-jet-ski__label-stock">
+                    <input class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--sale visually-hidden" type="checkbox"  name="sale" checked>
                     <span>sale</span>
                   </label>
                 </li>
                 <li class="filter-jet-ski__item-stock">
-                  <label class="filter-jet-ski__label-stock" for="stock-new">
-                    <input class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--new visually-hidden" type="checkbox" name="stock-new" id="stock-new">
+                  <label class="filter-jet-ski__label-stock">
+                    <input class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--new visually-hidden" type="checkbox" name="stock-new">
                     <span>New</span>
                   </label>
                 </li>
                 <li class="filter-jet-ski__item-stock">
-                  <label class="filter-jet-ski__label-stock" for="hit">
-                    <input class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--hit visually-hidden" type="checkbox"  name="hit" id="hit">
+                  <label class="filter-jet-ski__label-stock">
+                    <input class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--hit visually-hidden" type="checkbox"  name="hit">
                     <span>Hit</span>
                   </label>
                 </li>
                 <li class="filter-jet-ski__item-stock">
-                  <label class="filter-jet-ski__label-stock" for="dealer">
-                    <input class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--dealer visually-hidden" type="checkbox"  name="dealer" id="dealer" checked>
+                  <label class="filter-jet-ski__label-stock">
+                    <input class="filter-jet-ski__checkbox-jet-ski filter-jet-ski__checkbox-jet-ski--dealer visually-hidden" type="checkbox"  name="dealer" checked>
                     <span>Дилер</span>
                   </label>
                 </li>
@@ -795,7 +799,7 @@
                 <p class="product__not-available">нет в наличии</p>
                 <a class="product__inform" href="#">Сообщить о поступлении</a>
               </div>
-              <a class="product__view-link" href="#">product
+              <a class="product__view-link" href="#">
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>

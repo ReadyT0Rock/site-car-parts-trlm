@@ -5,11 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет-магазин экстремальной техники: Drive Moto</title>
+  <link rel="preload" href="fonts/san-francisco-pro-display-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/san-francisco-pro-display-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/san-francisco-pro-display-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/barlow-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/barlow-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="img/favicons/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link href="css/style.css  " rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -166,7 +171,7 @@
             <a class="breadcrumbs__link" href="jet-ski.html">Гидроциклы</a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link">Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</a>
+            <a class="breadcrumbs__link breadcrumbs__link--current">Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</a>
           </li>
         </ul>
       </div>
@@ -231,7 +236,7 @@
             </ul>
             <div class="product-card__btn-wrapper">
               <button class="product-card__btn product-card__btn--characteristics product-card__btn--current" type="button">Характеристики</button>
-              <a class="product-card__btn" href="#self-delivery">Наличие в магазине</a>
+              <a class="product-card__btn product-card__btn--available" href="#self-delivery">Наличие в магазине</a>
             </div>
             <ul class="product-card__list">
               <li class="product-card__item">
@@ -461,7 +466,7 @@
                 <p class="product__not-available">нет в наличии</p>
                 <a class="product__inform" href="#">Сообщить о поступлении</a>
               </div>
-              <a class="product__view-link" href="#">product
+              <a class="product__view-link" href="#">
                 <span class="product__view-text">Посмотреть товар</span>
               </a>
             </li>
